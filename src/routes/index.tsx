@@ -1,26 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "../components/Navbar";
+import { HeroSection } from "../components/HeroSection";
+import { ProblemSection } from "../components/ProblemSection";
+import { SolutionSection } from "../components/SolutionSection";
+import { HowItWorksSection } from "../components/HowItWorksSection";
+import { BenefitsSection } from "../components/BenefitsSection";
+import { DifferentiatorSection } from "../components/DifferentiatorSection";
+import { FreeOfferCTA } from "../components/FreeOfferCTA";
+import { FinalCTA } from "../components/FinalCTA";
+import { Footer } from "../components/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Reeb Synapse — Transformamos atenção em vendas reais" },
+      { name: "description", content: "Sistema de conversão com IA: vídeos, jingles, landing pages e campanhas que geram vendas reais." },
+      { property: "og:title", content: "Reeb Synapse — Transformamos atenção em vendas reais" },
+      { property: "og:description", content: "Sistema de conversão com IA: vídeos, jingles, landing pages e campanhas que geram vendas reais." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <HowItWorksSection />
+      <BenefitsSection />
+      <DifferentiatorSection />
+      <FreeOfferCTA />
+      <FinalCTA />
+      <Footer />
+    </>
+  );
 }
