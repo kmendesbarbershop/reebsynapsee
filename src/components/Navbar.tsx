@@ -7,8 +7,8 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1a0a]/90 backdrop-blur-md border-b border-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <div className="leading-tight">
-          <span className="block text-sm font-bold tracking-widest text-foreground">REEB</span>
-          <span className="block text-xs font-semibold tracking-wider text-neon">Synapse</span>
+          <span className="block text-sm font-bold tracking-widest text-neon">REEB</span>
+          <span className="block text-xs font-semibold tracking-wider text-foreground">Synapse</span>
         </div>
 
         {/* Mobile toggle */}
