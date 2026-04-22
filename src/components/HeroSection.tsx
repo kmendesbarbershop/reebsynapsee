@@ -1,9 +1,11 @@
 import { FadeInUp } from "./FadeInUp";
+import BackgroundScene from "./ui/aurora-section-hero";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 px-4">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center justify-center pt-16 px-4 overflow-hidden">
+      <BackgroundScene />
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
         <FadeInUp>
           <span className="pill-badge inline-block mb-6">SISTEMA DE CONVERSÃO COM IA</span>
         </FadeInUp>

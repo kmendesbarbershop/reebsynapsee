@@ -220,3 +220,77 @@
     box-shadow: 0 0 12px rgba(74, 222, 128, 0.6);
   }
 }
+
+/* === AURORA SECTION HERO BACKGROUND === */
+.scene {
+  --aurora-light: #00ff7f;
+  --aurora-glow-1: rgba(0, 255, 127, 0.8);
+  --aurora-glow-2: rgba(60, 255, 157, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scene .floor {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 120px;
+  background: radial-gradient(ellipse at center, var(--aurora-glow-1) 0%, transparent 70%);
+  animation: floorGlow 4s ease-in-out infinite alternate;
+}
+
+.scene .main-column {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, var(--aurora-light), transparent);
+  filter: blur(15px);
+  opacity: 0.6;
+  animation: mainGlow 3s ease-in-out infinite alternate;
+}
+
+.scene .light-stream-container {
+  position: absolute;
+  inset: 0;
+}
+
+.scene .light-beam {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, var(--aurora-glow-1), var(--aurora-glow-2), transparent);
+  border-radius: 2px;
+  animation:
+    rise 5s ease-in-out infinite,
+    fade 5s ease-in-out infinite,
+    rise 4s ease-in-out infinite reverse;
+}
+
+@keyframes rise {
+  0% { transform: translateY(100%); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-10%); opacity: 0; }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  5%, 80% { opacity: 0.7; }
+}
+
+@keyframes floorGlow {
+  0%, 100% { transform: translateX(-50%) scale(0.9); opacity: 0.7; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+}
+
+@keyframes mainGlow {
+  from { opacity: 0.6; filter: blur(25px); }
+  to { opacity: 0.8; filter: blur(15px); }
+}
