@@ -1,5 +1,3 @@
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
-
 export function Footer() {
   return (
     <footer className="py-12 px-4">
@@ -11,30 +9,6 @@ export function Footer() {
           </span>
         </div>
         <p className="text-muted-custom text-sm mb-6">Onde a atenção vira venda.</p>
-
-        <div className="flex justify-center gap-6 mb-8">
-          <a
-            href="#"
-            aria-label="Instagram"
-            className="text-muted-custom hover:text-neon transition-colors"
-          >
-            <Instagram size={22} />
-          </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            className="text-muted-custom hover:text-neon transition-colors"
-          >
-            <Linkedin size={22} />
-          </a>
-          <a
-            href="#"
-            aria-label="WhatsApp"
-            className="text-muted-custom hover:text-neon transition-colors"
-          >
-            <MessageCircle size={22} />
-          </a>
-        </div>
 
         <div
           className="h-px w-full max-w-2xl mx-auto mb-6"
