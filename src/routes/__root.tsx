@@ -36,12 +36,6 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { property: "og:title", content: "Reeb Synapse" },
-      { name: "twitter:title", content: "Reeb Synapse" },
-      { property: "og:description", content: "Transformamos atenção em vendas reais com IA." },
-      { name: "twitter:description", content: "Transformamos atenção em vendas reais com IA." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/244afa04-2015-4011-ab19-fd2590473b44/id-preview-08371fa6--e3a35494-f9b9-451e-80c7-0f80e731c13d.lovable.app-1776888771368.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/244afa04-2015-4011-ab19-fd2590473b44/id-preview-08371fa6--e3a35494-f9b9-451e-80c7-0f80e731c13d.lovable.app-1776888771368.png" },
     ],
     links: [
       {
