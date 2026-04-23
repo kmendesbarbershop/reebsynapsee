@@ -9,6 +9,7 @@ const services = [
     title: "Vídeos publicitários com IA",
     description:
       "Conteúdo visual produzido com inteligência artificial — mais rápido, mais criativo e feito para converter.",
+    video: "/videos/videos-showcase.mp4",
   },
   {
     id: "jingles",
