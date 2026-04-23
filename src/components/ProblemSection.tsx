@@ -1,36 +1,29 @@
 import { FadeInUp } from "./FadeInUp";
 
-const cards = [
-  { emoji: "📉", title: "Tráfego sem conversão" },
-  { emoji: "📢", title: "Comunicação sem conexão" },
-  { emoji: "🔁", title: "Campanhas sem estrutura" },
-];
-
 export function ProblemSection() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center">
         <FadeInUp>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Você aparece. Mas não vende como poderia.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            Vamos ser honestos.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.1}>
-          <p className="text-muted-custom text-lg mb-12 max-w-2xl mx-auto">
-            Posta, anuncia, aparece… mas as vendas não acompanham o esforço. Falta estrutura, comunicação e estratégia.
+          <p className="text-muted-custom text-lg mb-6 max-w-2xl mx-auto">
+            Quantas vezes você investiu em marketing e não soube explicar por que não vendeu?
           </p>
         </FadeInUp>
-
-        <div className="grid sm:grid-cols-3 gap-6">
-          {cards.map((c, i) => (
-            <FadeInUp key={c.title} delay={0.15 + i * 0.1}>
-              <div className="glass-card p-6 text-center">
-                <span className="text-3xl mb-3 block">{c.emoji}</span>
-                <p className="font-semibold">{c.title}</p>
-              </div>
-            </FadeInUp>
-          ))}
-        </div>
+        <FadeInUp delay={0.15}>
+          <p className="text-muted-custom text-lg mb-8 max-w-2xl mx-auto">
+            Post, criativo, influenciador, tráfego pago… Tudo isso sem estratégia é só barulho.
+          </p>
+        </FadeInUp>
+        <FadeInUp delay={0.2}>
+          <p className="text-2xl sm:text-3xl font-bold text-neon">
+            E barulho não paga boleto.
+          </p>
+        </FadeInUp>
       </div>
     </section>
   );

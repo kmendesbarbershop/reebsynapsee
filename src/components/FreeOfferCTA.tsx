@@ -14,7 +14,7 @@ export function FreeOfferCTA() {
         </FadeInUp>
         <FadeInUp delay={0.2}>
           <a href="#cta-final" className="btn-neon inline-block px-8 py-4 text-lg">
-            Quero meu diagnóstico gratuito
+            QUERO PARAR DE PERDER VENDAS 👉
           </a>
           <p className="text-xs text-muted-custom mt-4">Vagas limitadas por semana</p>
         </FadeInUp>
