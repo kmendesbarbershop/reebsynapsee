@@ -9,6 +9,7 @@ const services = [
     title: "Vídeos publicitários com IA",
     description:
       "Conteúdo visual produzido com inteligência artificial — mais rápido, mais criativo e feito para converter.",
+    video: "/videos/videos-showcase.mp4",
   },
   {
     id: "jingles",
@@ -81,7 +82,7 @@ export const ServicesCarousel: React.FC = () => {
               <div
                 key={`${service.id}-${idx}`}
                 aria-hidden={idx >= services.length ? true : undefined}
-                className="shrink-0 relative flex flex-col gap-3 text-left"
+                className="shrink-0 relative flex flex-col gap-3 text-left overflow-hidden"
                 style={{
                   width: 300,
                   minHeight: 220,
@@ -100,6 +101,31 @@ export const ServicesCarousel: React.FC = () => {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
+                {service.video && (
+                  <>
+                    <video
+                      src={service.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-hidden
+                      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                      style={{ zIndex: 0, opacity: 0.55 }}
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 pointer-events-none"
+                      style={{
+                        zIndex: 1,
+                        background:
+                          "linear-gradient(180deg, rgba(10,20,12,0.55) 0%, rgba(10,20,12,0.85) 65%, rgba(10,20,12,0.95) 100%)",
+                      }}
+                    />
+                  </>
+                )}
+                <div className="relative flex flex-col gap-3" style={{ zIndex: 2 }}>
                 {service.tag && (
                   <span
                     style={{
@@ -141,6 +167,7 @@ export const ServicesCarousel: React.FC = () => {
                 <p className="text-muted-custom text-sm leading-relaxed">
                   {service.description}
                 </p>
+                </div>
               </div>
             );
           })}
