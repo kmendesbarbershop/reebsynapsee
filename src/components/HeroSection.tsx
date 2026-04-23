@@ -1,12 +1,30 @@
 import { FadeInUp } from "./FadeInUp";
 import BackgroundScene from "./ui/aurora-section-hero";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import FuturisticHeroSafe from "./ui/hero-futuristic-safe";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 px-4 overflow-hidden">
+      {/* Layer 1: dark green base background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          zIndex: 0,
+          background:
+            "radial-gradient(ellipse at center, rgba(10,26,10,0.6) 0%, rgba(0,0,0,0.85) 80%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Layer 2: WebGPU futuristic effect (or CSS fallback) */}
+      <FuturisticHeroSafe />
+
+      {/* Layer 3: existing aurora */}
       <BackgroundScene />
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+
+      {/* Layer 4: Hero content */}
+      <div className="relative max-w-3xl mx-auto text-center" style={{ zIndex: 10 }}>
         <FadeInUp delay={0.1}>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 font-[var(--font-heading)]">
             <span className="text-foreground">Chega de Marketing que Não Vende.</span>

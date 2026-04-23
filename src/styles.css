@@ -347,3 +347,9 @@
 .alert-pulse {
   animation: alertPulse 1.2s ease-in-out infinite;
 }
+
+/* === FUTURISTIC HERO FALLBACK PULSE === */
+@keyframes pulseGlow {
+  0%   { opacity: 0.7; transform: scale(0.98); }
+  100% { opacity: 1;   transform: scale(1.02); }
+}
