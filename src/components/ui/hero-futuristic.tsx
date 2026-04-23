@@ -105,8 +105,7 @@ const Scene = () => {
     const brightness = mx_cell_noise_float(tUv.mul(tiling).div(2));
     const dist = float(tiledUv.length());
     const dot = float(smoothstep(0.5, 0.49, dist)).mul(brightness);
-    const depth = tDepthMap;
-    const flow = oneMinus(smoothstep(0, 0.02, abs(depth.sub(uProgress))));
+    const flow = oneMinus(smoothstep(0, 0.02, abs(tDepthMap.r.sub(uProgress))));
 
     const mask = dot.mul(flow).mul(vec3(0.3, 10, 0.5));
 
