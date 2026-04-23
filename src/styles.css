@@ -260,9 +260,9 @@
 
 /* === AURORA SECTION HERO BACKGROUND === */
 .scene {
-  --aurora-light: #00ff7f;
-  --aurora-glow-1: rgba(0, 255, 127, 0.8);
-  --aurora-glow-2: rgba(60, 255, 157, 0.6);
+  --aurora-light: oklch(0.8478 0.1216 151.6321);
+  --aurora-glow-1: oklch(0.8478 0.1216 151.6321 / 0.8);
+  --aurora-glow-2: oklch(0.4907 0.1257 152.3495 / 0.6);
   position: absolute;
   inset: 0;
   z-index: 0;
