@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import BackgroundScene from "./ui/aurora-section-hero";
+import { ArrowRight, ArrowDown } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -28,15 +29,17 @@ export function HeroSection() {
 
         <FadeInUp delay={0.3}>
           <div className="flex flex-col items-center gap-4">
-            <a href="#cta-final" className="btn-neon inline-block px-8 py-4 text-lg">
-              QUERO PARAR DE PERDER VENDAS 👉
+            <a href="#cta-final" className="btn-neon inline-flex items-center gap-2 px-8 py-4 text-lg">
+              QUERO PARAR DE PERDER VENDAS
+              <ArrowRight size={20} />
             </a>
             <a
               href="#how-it-works"
-              className="text-sm font-medium hover:underline transition-colors"
+              className="text-sm font-medium hover:underline transition-colors inline-flex items-center gap-1"
               style={{ color: "#4ade80" }}
             >
-              ↓ Ver como funciona
+              <ArrowDown size={14} />
+              Ver como funciona
             </a>
           </div>
         </FadeInUp>
