@@ -1,9 +1,4 @@
-import { useState } from "react";
-import { MessageCircle } from "lucide-react";
-
 export function Navbar() {
-  const [open, setOpen] = useState(false);
-
   return (
     <>
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1a0a]/90 backdrop-blur-md border-b border-card">
