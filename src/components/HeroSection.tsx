@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import { RainingLettersBackground } from "@/components/ui/raining-letters";
 
 export function HeroSection() {
   return (
@@ -11,6 +12,22 @@ export function HeroSection() {
           zIndex: 0,
           background:
             "radial-gradient(ellipse at center, rgba(10,26,10,0.6) 0%, rgba(0,0,0,0.85) 80%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Layer 2: Raining letters animation */}
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }}>
+        <RainingLettersBackground />
+      </div>
+
+      {/* Layer 3: Radial vignette so center is darker and text is readable */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          zIndex: 2,
+          background:
+            "radial-gradient(ellipse at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, transparent 80%)",
         }}
         aria-hidden="true"
       />
