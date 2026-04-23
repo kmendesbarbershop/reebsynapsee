@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import { Check, Target } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const benefits = [
   "Análise do seu funil de vendas atual",
@@ -13,18 +14,13 @@ export function FreeOfferCTA() {
     <section className="py-16 px-4">
       <div className="max-w-3xl mx-auto">
         <FadeInUp>
-          <div
-            className="text-center"
-            style={{
-              border: "1px solid rgba(74,222,128,0.4)",
-              boxShadow: "0 0 40px rgba(74,222,128,0.15)",
-              background: "rgba(74,222,128,0.05)",
-              borderRadius: "16px",
-              padding: "60px 24px",
-            }}
+          <GlowCard
+            glowColor="green"
+            customSize={true}
+            className="w-full max-w-2xl mx-auto p-10 flex flex-col items-center text-center gap-6"
           >
             <span
-              className="inline-flex items-center gap-2 text-xs font-bold tracking-wider px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 text-xs font-bold tracking-wider px-4 py-2 rounded-full"
               style={{
                 color: "#4ade80",
                 border: "1px solid rgba(74, 222, 128, 0.4)",
@@ -34,12 +30,12 @@ export function FreeOfferCTA() {
               <Target size={14} />
               OFERTA EXCLUSIVA
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Diagnóstico gratuito</h2>
-            <p className="text-muted-custom text-lg mb-8 max-w-xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold">Diagnóstico gratuito</h2>
+            <p className="text-muted-custom text-lg max-w-xl mx-auto">
               Descubra onde você está perdendo vendas e como corrigir isso. Sem compromisso.
             </p>
 
-            <ul className="text-left max-w-md mx-auto space-y-3 mb-10">
+            <ul className="text-left max-w-md mx-auto space-y-3 w-full">
               {benefits.map((b) => (
                 <li key={b} className="flex items-start gap-3">
                   <Check
@@ -58,12 +54,12 @@ export function FreeOfferCTA() {
               Quero meu diagnóstico gratuito →
             </a>
             <p
-              className="text-sm font-medium mt-5"
+              className="text-sm font-medium"
               style={{ color: "#fbbf24" }}
             >
               ⏳ Apenas 5 vagas disponíveis por semana
             </p>
-          </div>
+          </GlowCard>
         </FadeInUp>
       </div>
     </section>

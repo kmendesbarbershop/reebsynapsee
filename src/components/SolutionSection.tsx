@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import { Video, Music, Layout, BarChart2 } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const features = [
   {
@@ -46,17 +47,10 @@ export function SolutionSection() {
         <div className="grid md:grid-cols-2 gap-6">
           {features.map((f, i) => (
             <FadeInUp key={f.title} delay={0.15 + i * 0.08}>
-              <div
-                className="glass-card p-6 text-left h-full relative transition-all duration-300 hover:translate-y-[-2px]"
-                style={{ border: "1px solid var(--card-border)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(74, 222, 128, 0.4)";
-                  e.currentTarget.style.boxShadow = "0 0 24px rgba(74, 222, 128, 0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "var(--card-border)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
+              <GlowCard
+                glowColor="green"
+                customSize={true}
+                className="w-full h-full min-h-[180px] flex flex-col gap-3 text-left"
               >
                 {f.aiPowered && (
                   <span
@@ -70,10 +64,10 @@ export function SolutionSection() {
                     IA POWERED
                   </span>
                 )}
-                <f.Icon size={28} style={{ color: "#4ade80" }} className="mb-3" />
-                <h3 className="font-semibold text-lg mb-2">{f.title}</h3>
+                <f.Icon size={28} style={{ color: "#4ade80" }} />
+                <h3 className="font-semibold text-lg">{f.title}</h3>
                 <p className="text-muted-custom text-sm">{f.desc}</p>
-              </div>
+              </GlowCard>
             </FadeInUp>
           ))}
         </div>

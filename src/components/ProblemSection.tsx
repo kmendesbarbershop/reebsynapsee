@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import { TrendingDown, Megaphone, Repeat } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const painPoints = [
   {
@@ -37,13 +38,15 @@ export function ProblemSection() {
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {painPoints.map((p, i) => (
             <FadeInUp key={p.title} delay={0.15 + i * 0.08}>
-              <div
-                className="glass-card p-6 h-full border-l-4 transition-all hover:translate-y-[-2px] alert-pulse"
+              <GlowCard
+                glowColor="red"
+                customSize={true}
+                className="w-full h-full min-h-[140px] flex flex-col gap-2 border-l-4 alert-pulse"
               >
-                <p.Icon size={28} style={{ color: "#ff8800" }} className="mb-3" />
-                <h3 className="font-semibold text-lg mb-2">{p.title}</h3>
+                <p.Icon size={28} style={{ color: "#ff8800" }} />
+                <h3 className="font-semibold text-lg">{p.title}</h3>
                 <p className="text-muted-custom text-sm">{p.desc}</p>
-              </div>
+              </GlowCard>
             </FadeInUp>
           ))}
         </div>

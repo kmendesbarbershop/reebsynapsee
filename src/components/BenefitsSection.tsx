@@ -1,5 +1,6 @@
 import { FadeInUp } from "./FadeInUp";
 import { Zap, Volume2, Building2, TrendingUp } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 const items = [
   {
@@ -40,19 +41,23 @@ export function BenefitsSection() {
         <div className="grid md:grid-cols-2 gap-6">
           {items.map((item, i) => (
             <FadeInUp key={item.title} delay={0.1 + i * 0.08}>
-              <div className="glass-card p-6 text-left h-full">
-                <div className="flex items-center gap-3 mb-3">
+              <GlowCard
+                glowColor="green"
+                customSize={true}
+                className="w-full min-h-[160px] flex flex-col gap-3 text-left"
+              >
+                <div className="flex items-center gap-3">
                   <item.Icon size={24} style={{ color: "#4ade80" }} />
                   <h3 className="font-semibold text-base text-muted-custom">{item.title}</h3>
                 </div>
                 <p
-                  className="text-2xl sm:text-3xl font-bold mb-2"
+                  className="text-2xl sm:text-3xl font-bold"
                   style={{ color: "#4ade80" }}
                 >
                   {item.metric}
                 </p>
                 <p className="text-muted-custom text-sm">{item.desc}</p>
-              </div>
+              </GlowCard>
             </FadeInUp>
           ))}
         </div>
