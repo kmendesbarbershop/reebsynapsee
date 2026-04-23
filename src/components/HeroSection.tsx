@@ -14,7 +14,7 @@ export function HeroSection() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 font-[var(--font-heading)]">
             <span className="text-foreground">Chega de Marketing que Não Vende.</span>
             <br />
-            <span className="text-neon">Aqui Você Tem um Sistema Completo — Da Estratégia à Venda.</span>
+            <span className="text-neon">Aqui Você Constrói uma Operação de Vendas de Verdade.</span>
           </h1>
         </FadeInUp>
 
