@@ -38,8 +38,7 @@ export function ProblemSection() {
           {painPoints.map((p, i) => (
             <FadeInUp key={p.title} delay={0.15 + i * 0.08}>
               <div
-                className="glass-card p-6 h-full border-l-4 transition-all hover:translate-y-[-2px]"
-                style={{ borderLeftColor: "#ff4444" }}
+                className="glass-card p-6 h-full border-l-4 transition-all hover:translate-y-[-2px] alert-pulse"
               >
                 <p.Icon size={28} style={{ color: "#ff8800" }} className="mb-3" />
                 <h3 className="font-semibold text-lg mb-2">{p.title}</h3>
