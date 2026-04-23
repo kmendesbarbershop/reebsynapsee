@@ -88,7 +88,7 @@ export const ServicesCarousel: React.FC = () => {
                   minHeight: 220,
                   padding: 24,
                   borderRadius: 16,
-                  background: "rgba(10, 20, 12, 0.6)",
+                  background: service.video ? "transparent" : "rgba(10, 20, 12, 0.6)",
                   border: "1px solid rgba(74,222,128,0.15)",
                   transition: "all 0.3s",
                 }}
@@ -105,14 +105,15 @@ export const ServicesCarousel: React.FC = () => {
                   <>
                     <video
                       src={service.video}
+                      muted
                       autoPlay
                       loop
-                      muted
                       playsInline
                       preload="metadata"
+                      disableRemotePlayback
                       aria-hidden
                       className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                      style={{ zIndex: 0, opacity: 0.55 }}
+                      style={{ zIndex: 0, opacity: 1 }}
                     />
                     <div
                       aria-hidden
@@ -120,7 +121,7 @@ export const ServicesCarousel: React.FC = () => {
                       style={{
                         zIndex: 1,
                         background:
-                          "linear-gradient(180deg, rgba(10,20,12,0.55) 0%, rgba(10,20,12,0.85) 65%, rgba(10,20,12,0.95) 100%)",
+                          "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
                       }}
                     />
                   </>
