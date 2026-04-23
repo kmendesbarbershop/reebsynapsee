@@ -1,28 +1,57 @@
 import { FadeInUp } from "./FadeInUp";
+import { Zap, Volume2, Building2, TrendingUp } from "lucide-react";
 
 const items = [
-  { emoji: "🎯", title: "Estratégia de marketing sob medida" },
-  { emoji: "✍️", title: "Copywriting profissional focado em conversão" },
-  { emoji: "🎬", title: "Produção de conteúdo de alta performance" },
-  { emoji: "📊", title: "Gestão completa de campanhas" },
-  { emoji: "🌐", title: "Landing pages que vendem" },
+  {
+    Icon: Zap,
+    title: "Mais conversão",
+    metric: "+40% em média",
+    desc: "Mais vendas com o mesmo volume de tráfego.",
+  },
+  {
+    Icon: Volume2,
+    title: "Comunicação memorável",
+    metric: "3x mais recall",
+    desc: "Sua marca fica na mente do cliente por mais tempo.",
+  },
+  {
+    Icon: Building2,
+    title: "Estrutura profissional",
+    metric: "Do zero ao ar",
+    desc: "Sistema completo montado e pronto para vender.",
+  },
+  {
+    Icon: TrendingUp,
+    title: "Crescimento previsível",
+    metric: "Escala real",
+    desc: "Resultados que crescem conforme o investimento.",
+  },
 ];
 
 export function BenefitsSection() {
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="py-16 px-4">
+      <div className="max-w-5xl mx-auto text-center">
         <FadeInUp>
           <h2 className="text-3xl sm:text-4xl font-bold mb-12">
             Tudo que você precisa. Em um só lugar.
           </h2>
         </FadeInUp>
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {items.map((item, i) => (
             <FadeInUp key={item.title} delay={0.1 + i * 0.08}>
-              <div className="glass-card p-6 text-left flex items-start gap-4">
-                <span className="text-3xl block">{item.emoji}</span>
-                <h3 className="font-semibold text-lg">{item.title}</h3>
+              <div className="glass-card p-6 text-left h-full">
+                <div className="flex items-center gap-3 mb-3">
+                  <item.Icon size={24} style={{ color: "#4ade80" }} />
+                  <h3 className="font-semibold text-base text-muted-custom">{item.title}</h3>
+                </div>
+                <p
+                  className="text-2xl sm:text-3xl font-bold mb-2"
+                  style={{ color: "#4ade80" }}
+                >
+                  {item.metric}
+                </p>
+                <p className="text-muted-custom text-sm">{item.desc}</p>
               </div>
             </FadeInUp>
           ))}

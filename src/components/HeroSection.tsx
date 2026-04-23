@@ -21,15 +21,24 @@ export function HeroSection() {
         </FadeInUp>
 
         <FadeInUp delay={0.25}>
-          <p className="text-sm text-neon font-medium mb-8">
+          <p className="text-base font-bold mb-8" style={{ color: "#4ade80" }}>
             Vídeos que prendem. Músicas que marcam. Páginas que vendem.
           </p>
         </FadeInUp>
 
         <FadeInUp delay={0.3}>
-          <a href="#cta-final" className="btn-neon inline-block px-8 py-4 text-lg">
-            QUERO PARAR DE PERDER VENDAS 👉
-          </a>
+          <div className="flex flex-col items-center gap-4">
+            <a href="#cta-final" className="btn-neon inline-block px-8 py-4 text-lg">
+              QUERO PARAR DE PERDER VENDAS 👉
+            </a>
+            <a
+              href="#how-it-works"
+              className="text-sm font-medium hover:underline transition-colors"
+              style={{ color: "#4ade80" }}
+            >
+              ↓ Ver como funciona
+            </a>
+          </div>
         </FadeInUp>
       </div>
     </section>
