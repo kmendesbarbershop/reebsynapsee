@@ -1,7 +1,7 @@
 import { FadeInUp } from "./FadeInUp";
 import BackgroundScene from "./ui/aurora-section-hero";
 import { ArrowRight, ArrowDown } from "lucide-react";
-import FuturisticHero from "@/components/ui/hero-futuristic";
+import FuturisticHeroSafe from "@/components/ui/hero-futuristic-safe";
 
 export function HeroSection() {
   return (
@@ -17,13 +17,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Layer 2: Futuristic Three.js hero scene */}
+      {/* Layer 2: WebGPU futuristic scene with CSS fallback */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ zIndex: 1 }}
         aria-hidden="true"
       >
-        <FuturisticHero />
+        <FuturisticHeroSafe />
       </div>
 
       {/* Layer 3: existing aurora */}
