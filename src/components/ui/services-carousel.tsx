@@ -18,6 +18,7 @@ const services = [
     title: "Jingles estratégicos e memoráveis",
     description:
       "Áudio que gruda na cabeça do seu cliente e faz sua marca ser lembrada na hora certa.",
+    video: "/videos/jingles-showcase.mp4",
   },
   {
     id: "landing",
@@ -121,7 +122,9 @@ export const ServicesCarousel: React.FC = () => {
                       style={{
                         zIndex: 1,
                         background:
-                          "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
+                          service.id === "jingles"
+                            ? "rgba(0,0,0,0.60)"
+                            : "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
                       }}
                     />
                   </>
