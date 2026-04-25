@@ -112,30 +112,21 @@ export const ServicesCarousel: React.FC = () => {
                       preload="metadata"
                       disableRemotePlayback
                       aria-hidden
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        zIndex: 0,
-                        pointerEvents: "none",
-                      }}
+                      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                      style={{ zIndex: 0, opacity: 1 }}
                     />
                     <div
                       aria-hidden
+                      className="absolute inset-0 pointer-events-none"
                       style={{
-                        position: "absolute",
-                        inset: 0,
-                        background: "rgba(0,0,0,0.55)",
                         zIndex: 1,
-                        pointerEvents: "none",
+                        background:
+                          "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
                       }}
                     />
                   </>
                 )}
-                <div className="flex flex-col gap-3" style={{ position: "relative", zIndex: 2 }}>
+                <div className="relative flex flex-col gap-3" style={{ zIndex: 2 }}>
                 {service.tag && (
                   <span
                     style={{
