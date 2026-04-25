@@ -27,6 +27,7 @@ const services = [
     title: "Landing pages de alta conversão",
     description:
       "Páginas construídas com foco em uma única missão: transformar visitante em comprador.",
+    video: "/videos/landing-showcase.mp4",
   },
   {
     id: "campanhas",
@@ -122,7 +123,7 @@ export const ServicesCarousel: React.FC = () => {
                       style={{
                         zIndex: 1,
                         background:
-                          service.id === "jingles"
+                          service.id === "jingles" || service.id === "landing"
                             ? "rgba(0,0,0,0.60)"
                             : "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
                       }}
