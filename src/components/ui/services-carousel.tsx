@@ -18,6 +18,7 @@ const services = [
     title: "Jingles estratégicos e memoráveis",
     description:
       "Áudio que gruda na cabeça do seu cliente e faz sua marca ser lembrada na hora certa.",
+    video: "/videos/jingles-showcase.mp4",
   },
   {
     id: "landing",
