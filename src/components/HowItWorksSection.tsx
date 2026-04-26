@@ -1,24 +1,30 @@
 import { FadeInUp } from "./FadeInUp";
-import { Settings, Layers, TrendingUp } from "lucide-react";
+import { Search, Map, MessageSquare, TrendingUp } from "lucide-react";
 
 const steps = [
   {
     num: "01",
-    Icon: Settings,
-    title: "Planejamento estratégico",
-    desc: "Mergulhamos no seu negócio para entender público, concorrência e oportunidades reais.",
+    Icon: Search,
+    title: "Diagnóstico",
+    desc: "Mergulhamos no seu negócio para entender onde você está perdendo vendas e quais são as maiores oportunidades.",
   },
   {
     num: "02",
-    Icon: Layers,
-    title: "Criação dos ativos",
-    desc: "Produzimos vídeos, jingles e páginas com qualidade premium em tempo recorde.",
+    Icon: Map,
+    title: "Mapeamento",
+    desc: "Mapeamos seu público, concorrência e canais ideais para construir uma estratégia personalizada.",
   },
   {
     num: "03",
+    Icon: MessageSquare,
+    title: "Comunicação",
+    desc: "Produzimos vídeos, jingles e páginas com qualidade premium — conteúdo que conecta e convence.",
+  },
+  {
+    num: "04",
     Icon: TrendingUp,
-    title: "Campanhas e otimização contínua",
-    desc: "Lançamos, medimos e otimizamos para que cada real investido gere o máximo retorno.",
+    title: "Conversão",
+    desc: "Lançamos campanhas, medimos resultados e otimizamos continuamente para transformar atenção em venda.",
   },
 ];
 
@@ -37,11 +43,11 @@ export function HowItWorksSection() {
           </p>
         </FadeInUp>
 
-        <div className="relative grid md:grid-cols-3 gap-8">
+        <div className="relative grid md:grid-cols-4 gap-8">
           {/* Animated dashed connector — desktop only */}
           <div
             aria-hidden
-            className="hidden md:block absolute top-12 left-[16%] right-[16%] h-px"
+            className="hidden md:block absolute top-12 left-[12%] right-[12%] h-px"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(to right, #4ade80 0 8px, transparent 8px 16px)",
