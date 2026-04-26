@@ -177,13 +177,14 @@ export const ServicesCarousel: React.FC = () => {
                     />
                   </>
                 )}
-                <div className="relative flex flex-col gap-3" style={{ zIndex: 2 }}>
+                <div className="relative flex flex-col gap-3" style={{ zIndex: 10 }}>
                 {service.tag && (
                   <span
                     style={{
                       position: "absolute",
                       top: 12,
                       right: 12,
+                      zIndex: 10,
                       fontSize: 10,
                       fontWeight: 700,
                       letterSpacing: "0.1em",
