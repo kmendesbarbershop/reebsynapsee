@@ -56,7 +56,12 @@ export function HeroSection() {
 
         <FadeInUp delay={0.3}>
           <div className="flex flex-col items-center gap-4">
-            <a href="#cta-final" className="btn-neon inline-flex items-center gap-2 px-8 py-4 text-lg">
+            <a
+              href="https://wa.me/5591982540570"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-neon inline-flex items-center gap-2 px-8 py-4 text-lg"
+            >
               QUERO PARAR DE PERDER VENDAS
               <ArrowRight size={20} />
             </a>

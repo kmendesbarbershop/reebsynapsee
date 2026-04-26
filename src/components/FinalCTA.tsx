@@ -44,7 +44,9 @@ export function FinalCTA() {
         </FadeInUp>
         <FadeInUp delay={0.3}>
           <a
-            href="#cta-final"
+            href="https://wa.me/5591982540570"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-neon inline-flex items-center gap-3 px-12 py-5 text-xl pulse-glow"
           >
             Começar agora
