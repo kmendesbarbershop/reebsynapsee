@@ -36,6 +36,7 @@ const services = [
     title: "Campanhas de tráfego pago otimizadas",
     description:
       "Anúncios no Meta e Google com segmentação inteligente e otimização contínua.",
+    video: "/videos/campanhas-showcase.mp4",
   },
 ];
 
@@ -123,7 +124,7 @@ export const ServicesCarousel: React.FC = () => {
                       style={{
                         zIndex: 1,
                         background:
-                          service.id === "jingles" || service.id === "landing"
+                          service.id === "jingles" || service.id === "landing" || service.id === "campanhas"
                             ? "rgba(0,0,0,0.60)"
                             : "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
                       }}
