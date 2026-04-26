@@ -12,7 +12,7 @@ export function Navbar() {
 
     {/* Floating WhatsApp button — fixed, follows scroll */}
     <a
-      href="https://wa.me/5500000000000"
+      href="https://wa.me/5591982540570"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
