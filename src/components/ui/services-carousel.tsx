@@ -110,7 +110,7 @@ export const ServicesCarousel: React.FC = () => {
               <div
                 key={`${service.id}-${idx}`}
                 aria-hidden={idx >= services.length ? true : undefined}
-                className="shrink-0 relative flex flex-col gap-3 text-left overflow-hidden"
+                className="shrink-0 flex flex-col gap-3 text-left"
                 style={{
                   width: 300,
                   minHeight: 220,
@@ -121,6 +121,8 @@ export const ServicesCarousel: React.FC = () => {
                   boxShadow: "none",
                   cursor: "default",
                   transition: "all 0.3s",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "rgba(74,222,128,0.5)";
@@ -143,13 +145,24 @@ export const ServicesCarousel: React.FC = () => {
                       disableRemotePlayback
                       aria-hidden
                       {...({ "webkit-playsinline": "", "x5-playsinline": "" } as Record<string, string>)}
-                      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                      style={{ zIndex: 0, opacity: 1 }}
+                      className="pointer-events-none"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        zIndex: 0,
+                        opacity: 1,
+                      }}
                     />
                     <div
                       aria-hidden
-                      className="absolute inset-0 pointer-events-none"
+                      className="pointer-events-none"
                       style={{
+                        position: "absolute",
+                        inset: 0,
                         zIndex: 1,
                         background:
                           service.id === "jingles" || service.id === "landing" || service.id === "campanhas"
@@ -159,7 +172,16 @@ export const ServicesCarousel: React.FC = () => {
                     />
                   </>
                 )}
-                <div className="relative flex flex-col gap-3" style={{ zIndex: 10 }}>
+                <div
+                  className="flex flex-col gap-3"
+                  style={{
+                    position: "relative",
+                    zIndex: 10,
+                    pointerEvents: "auto",
+                    opacity: 1,
+                    visibility: "visible",
+                  }}
+                >
                 {service.tag && (
                   <span
                     style={{
