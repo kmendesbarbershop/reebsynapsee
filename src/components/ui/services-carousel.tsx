@@ -45,6 +45,31 @@ export const ServicesCarousel: React.FC = () => {
   const loop = [...services, ...services];
   const [expandedVideos, setExpandedVideos] = React.useState(false);
 
+  // Ensure videos play on mobile (iOS/Android) where autoplay can be blocked
+  React.useEffect(() => {
+    const tryPlayAll = () => {
+      document.querySelectorAll("video").forEach((video) => {
+        video.muted = true;
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "");
+        video.setAttribute("muted", "");
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            const resume = () => {
+              document.querySelectorAll("video").forEach((v) => {
+                v.play().catch(() => {});
+              });
+            };
+            document.addEventListener("touchstart", resume, { once: true });
+            document.addEventListener("click", resume, { once: true });
+          });
+        }
+      });
+    };
+    tryPlayAll();
+  }, []);
+
   return (
     <div className="w-full max-w-6xl mx-auto">
       <div className="mb-8 px-4">
@@ -132,9 +157,10 @@ export const ServicesCarousel: React.FC = () => {
                       autoPlay
                       loop
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                       disableRemotePlayback
                       aria-hidden
+                      {...({ "webkit-playsinline": "", "x5-playsinline": "" } as Record<string, string>)}
                       className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                       style={{ zIndex: 0, opacity: 1 }}
                     />
