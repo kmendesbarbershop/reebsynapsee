@@ -43,6 +43,7 @@ const services = [
 export const ServicesCarousel: React.FC = () => {
   // Duplicate the list so the translateX(-50%) loop is seamless
   const loop = [...services, ...services];
+  const [expandedVideos, setExpandedVideos] = React.useState(false);
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -81,25 +82,44 @@ export const ServicesCarousel: React.FC = () => {
         <div className="services-marquee-track flex gap-5 py-2">
           {loop.map((service, idx) => {
             const Icon = service.icon;
+            const isVideosCard = service.id === "videos";
+            const isExpanded = isVideosCard && expandedVideos;
             return (
               <div
                 key={`${service.id}-${idx}`}
                 aria-hidden={idx >= services.length ? true : undefined}
                 className="shrink-0 relative flex flex-col gap-3 text-left overflow-hidden"
+                onClick={isVideosCard ? () => setExpandedVideos((v) => !v) : undefined}
+                role={isVideosCard ? "button" : undefined}
+                tabIndex={isVideosCard ? 0 : undefined}
+                onKeyDown={
+                  isVideosCard
+                    ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setExpandedVideos((v) => !v);
+                        }
+                      }
+                    : undefined
+                }
                 style={{
                   width: 300,
                   minHeight: 220,
                   padding: 24,
                   borderRadius: 16,
                   background: service.video ? "transparent" : "rgba(10, 20, 12, 0.6)",
-                  border: "1px solid rgba(74,222,128,0.15)",
+                  border: `1px solid ${isExpanded ? "rgba(74,222,128,0.6)" : "rgba(74,222,128,0.15)"}`,
+                  boxShadow: isExpanded ? "0 0 20px rgba(0,200,100,0.3)" : "none",
+                  cursor: isVideosCard ? "pointer" : "default",
                   transition: "all 0.3s",
                 }}
                 onMouseEnter={(e) => {
+                  if (isExpanded) return;
                   e.currentTarget.style.borderColor = "rgba(74,222,128,0.5)";
                   e.currentTarget.style.boxShadow = "0 0 20px rgba(74,222,128,0.1)";
                 }}
                 onMouseLeave={(e) => {
+                  if (isExpanded) return;
                   e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)";
                   e.currentTarget.style.boxShadow = "none";
                 }}
@@ -170,9 +190,26 @@ export const ServicesCarousel: React.FC = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-muted-custom text-sm leading-relaxed">
-                  {service.description}
-                </p>
+                {isVideosCard ? (
+                  <div
+                    style={{
+                      maxHeight: isExpanded ? 200 : 0,
+                      opacity: isExpanded ? 1 : 0,
+                      transform: isExpanded ? "translateY(0)" : "translateY(8px)",
+                      overflow: "hidden",
+                      transition:
+                        "max-height 300ms ease, opacity 300ms ease, transform 300ms ease",
+                    }}
+                  >
+                    <p className="text-muted-custom text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-muted-custom text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                )}
                 </div>
               </div>
             );
