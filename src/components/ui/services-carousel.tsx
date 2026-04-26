@@ -160,10 +160,7 @@ export const ServicesCarousel: React.FC = () => {
                       preload="auto"
                       disableRemotePlayback
                       aria-hidden
-                      // @ts-expect-error - non-standard iOS Safari attribute
-                      webkit-playsinline=""
-                      // @ts-expect-error - legacy iOS attribute
-                      x5-playsinline=""
+                      {...({ "webkit-playsinline": "", "x5-playsinline": "" } as Record<string, string>)}
                       className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                       style={{ zIndex: 0, opacity: 1 }}
                     />
