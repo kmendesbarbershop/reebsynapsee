@@ -44,14 +44,37 @@ export const ServicesCarousel: React.FC = () => {
   // Duplicate the list so the translateX(-50%) loop is seamless
   const loop = [...services, ...services];
 
+  const [isMobile, setIsMobile] = React.useState<boolean>(
+    typeof window !== "undefined" ? window.innerWidth < 768 : false
+  );
+
+  React.useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   // Ensure videos play on mobile (iOS/Android) where autoplay can be blocked
   React.useEffect(() => {
+    // On mobile, pause + hide all videos to relieve GPU/CPU
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      document.querySelectorAll("video").forEach((v) => {
+        try {
+          v.pause();
+        } catch {}
+        v.style.display = "none";
+      });
+      return;
+    }
+
     const tryPlayAll = () => {
       document.querySelectorAll("video").forEach((video) => {
         video.muted = true;
         video.setAttribute("playsinline", "");
         video.setAttribute("webkit-playsinline", "");
         video.setAttribute("muted", "");
+        video.style.display = "block";
         const playPromise = video.play();
         if (playPromise !== undefined) {
           playPromise.catch(() => {
@@ -67,7 +90,7 @@ export const ServicesCarousel: React.FC = () => {
       });
     };
     tryPlayAll();
-  }, []);
+  }, [isMobile]);
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -116,24 +139,32 @@ export const ServicesCarousel: React.FC = () => {
                   minHeight: 220,
                   padding: 24,
                   borderRadius: 16,
-                  background: service.video ? "transparent" : "rgba(10, 20, 12, 0.6)",
+                  background: service.video
+                    ? isMobile
+                      ? "rgba(5,16,31,0.95)"
+                      : "transparent"
+                    : "rgba(10, 20, 12, 0.6)",
                   border: "1px solid rgba(74,222,128,0.15)",
                   boxShadow: "none",
+                  backdropFilter: isMobile ? "none" : undefined,
+                  WebkitBackdropFilter: isMobile ? "none" : undefined,
                   cursor: "default",
                   transition: "all 0.3s",
                   position: "relative",
                   overflow: "hidden",
                 }}
                 onMouseEnter={(e) => {
+                  if (isMobile) return;
                   e.currentTarget.style.borderColor = "rgba(74,222,128,0.5)";
                   e.currentTarget.style.boxShadow = "0 0 20px rgba(74,222,128,0.1)";
                 }}
                 onMouseLeave={(e) => {
+                  if (isMobile) return;
                   e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)";
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                {service.video && (
+                {service.video && !isMobile && (
                   <>
                     <video
                       src={service.video}

@@ -273,3 +273,17 @@
 .alert-pulse {
   animation: alertPulse 1.2s ease-in-out infinite;
 }
+
+/* === MOBILE PERFORMANCE OPTIMIZATIONS === */
+@media (max-width: 768px) {
+  /* Reduce heavy animations/transitions on mobile, but keep the marquee running */
+  *:not(.services-marquee-track):not(.services-marquee):not(.alert-pulse) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  /* Slow down the marquee to ease GPU/CPU on mobile */
+  .services-marquee-track {
+    animation-duration: 40s !important;
+  }
+}
