@@ -39,7 +39,7 @@ export function HowItWorksSection() {
         </FadeInUp>
         <FadeInUp delay={0.1}>
           <p className="text-muted-custom text-lg mb-16 text-center max-w-2xl mx-auto">
-            A Reeb Synapse opera com 3 etapas comprovadas:
+            A Reeb Synapse opera com 4 etapas comprovadas:
           </p>
         </FadeInUp>
 
@@ -60,13 +60,6 @@ export function HowItWorksSection() {
           {steps.map((s, i) => (
             <FadeInUp key={s.title} delay={0.15 + i * 0.12}>
               <div className="relative text-center px-2">
-                <span
-                  aria-hidden
-                  className="absolute -top-6 left-1/2 -translate-x-1/2 text-7xl font-black select-none pointer-events-none"
-                  style={{ color: "rgba(74, 222, 128, 0.08)" }}
-                >
-                  {s.num}
-                </span>
                 <div className="relative z-10 flex justify-center mb-4">
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center"
