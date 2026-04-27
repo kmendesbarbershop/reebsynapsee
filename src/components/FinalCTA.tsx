@@ -25,7 +25,7 @@ export function FinalCTA() {
         </FadeInUp>
         <FadeInUp delay={0.1}>
           <p className="text-2xl sm:text-3xl font-bold text-neon mb-6">
-            Não depende de sorte. Depende de sistema.
+            Não depende de sorte. Depende de estratégia.
           </p>
         </FadeInUp>
         <FadeInUp delay={0.15}>
