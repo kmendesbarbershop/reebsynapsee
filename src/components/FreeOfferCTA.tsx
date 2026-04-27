@@ -48,7 +48,9 @@ export function FreeOfferCTA() {
             </ul>
 
             <a
-              href="#cta-final"
+              href="https://wa.me/5591982540570"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-neon inline-block w-full sm:w-auto px-10 py-4 text-lg"
             >
               Quero meu diagnóstico gratuito
