@@ -9,7 +9,7 @@ const services = [
     title: "Vídeos publicitários com IA",
     description:
       "Conteúdo visual produzido com inteligência artificial — mais rápido, mais criativo e feito para converter.",
-    video: "/videos/videos-showcase.mp4",
+    video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320878/copy_C7664BD2-BFBC-48F0-8712-9FDBD1171685_m3y1lb.mov",
   },
   {
     id: "jingles",
@@ -18,7 +18,7 @@ const services = [
     title: "Jingles estratégicos e memoráveis",
     description:
       "Áudio que gruda na cabeça do seu cliente e faz sua marca ser lembrada na hora certa.",
-    video: "/videos/jingles-showcase.mp4",
+    video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/freepik_quero-um-vdeo-animado-_kling_720p_16-9_24fps_33315_eryosd.mp4",
   },
   {
     id: "landing",
@@ -27,7 +27,7 @@ const services = [
     title: "Landing pages de alta conversão",
     description:
       "Páginas construídas com foco em uma única missão: transformar visitante em comprador.",
-    video: "/videos/landing-showcase.mp4",
+    video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/copy_0EF91E3E-BD87-4AFB-B695-34DBA9B75DE2_a3ifdg.mov",
   },
   {
     id: "campanhas",
@@ -36,7 +36,7 @@ const services = [
     title: "Campanhas de tráfego pago otimizadas",
     description:
       "Anúncios no Meta e Google com segmentação inteligente e otimização contínua.",
-    video: "/videos/campanhas-showcase.mp4",
+    video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/freepik_quero-um-video-animado-de_2865515716_doknwb.mp4",
   },
 ];
 
