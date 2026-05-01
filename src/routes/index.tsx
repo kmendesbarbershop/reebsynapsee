@@ -7,6 +7,7 @@ import { HowItWorksSection } from "../components/HowItWorksSection";
 import { BenefitsSection } from "../components/BenefitsSection";
 import { DifferentiatorSection } from "../components/DifferentiatorSection";
 import { FreeOfferCTA } from "../components/FreeOfferCTA";
+import { AIConsultingSection } from "../components/AIConsultingSection";
 import { FinalCTA } from "../components/FinalCTA";
 import { Footer } from "../components/Footer";
 
@@ -32,6 +33,7 @@ function Index() {
       <HowItWorksSection />
       <BenefitsSection />
       <DifferentiatorSection />
+      <AIConsultingSection />
       <FreeOfferCTA />
       <FinalCTA />
       <Footer />
