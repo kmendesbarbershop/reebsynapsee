@@ -1,9 +1,0 @@
-{
-  "buildCommand": "bun run build",
-  "outputDirectory": ".output",
-  "framework": null,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/" }
-  ]
-}
