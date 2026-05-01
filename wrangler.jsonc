@@ -1,5 +1,7 @@
 {
-  "name": "lovable-tanstack",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tanstack-start-app",
+  "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "compatibility_date": "2025-04-01"
+  "main": "@tanstack/react-start/server-entry",
 }
