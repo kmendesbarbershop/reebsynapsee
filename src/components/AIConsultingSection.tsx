@@ -52,8 +52,8 @@ export function AIConsultingSection() {
             <img
               src={ceoImage}
               alt="Kleydir Mendes — CEO da Reeb Synapse"
-              className="w-16 h-16 rounded-full object-cover"
-              style={{ border: "2px solid var(--neon)" }}
+              className="w-24 h-24 rounded-full object-cover mx-auto"
+              style={{ border: "3px solid var(--neon)", boxShadow: "0 0 16px rgba(74,222,128,0.4)" }}
             />
             <div>
               <p className="text-foreground font-bold text-lg">Kleydir Mendes</p>
