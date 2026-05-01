@@ -57,7 +57,7 @@ export function HeroSection() {
         <FadeInUp delay={0.3}>
           <div className="flex flex-col items-center gap-4">
             <a
-              href="https://wa.me/5591982540570"
+              href="https://wa.me/5591982540570?text=Olá!%20Quero%20parar%20de%20perder%20vendas%20e%20montar%20uma%20operação%20de%20marketing%20de%20verdade.%20Pode%20me%20ajudar%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon inline-flex items-center gap-2 px-8 py-4 text-lg"

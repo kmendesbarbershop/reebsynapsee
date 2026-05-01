@@ -12,7 +12,7 @@ export function Navbar() {
 
     {/* Floating WhatsApp button — fixed, follows scroll */}
     <a
-      href="https://wa.me/5591982540570"
+      href="https://wa.me/5591982540570?text=Olá!%20Vim%20pelo%20site%20da%20Reeb%20Synapse%20e%20gostaria%20de%20mais%20informações."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
