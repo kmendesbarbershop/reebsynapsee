@@ -1,6 +1,7 @@
 import { FadeInUp } from "./FadeInUp";
 import { Check, Zap, Bot } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import ceoImage from "@/assets/ceo-kleydir.jpg";
 
 const benefits = [
   "Mapa das ferramentas certas para seu negócio",
@@ -48,15 +49,12 @@ export function AIConsultingSection() {
             className="w-full max-w-[600px] mx-auto p-8 sm:p-10 flex flex-col items-center text-center gap-6"
           >
             {/* Avatar */}
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold"
-              style={{
-                background: "var(--neon)",
-                color: "var(--neon-foreground)",
-              }}
-            >
-              KM
-            </div>
+            <img
+              src={ceoImage}
+              alt="Kleydir Mendes — CEO da Reeb Synapse"
+              className="w-16 h-16 rounded-full object-cover"
+              style={{ border: "2px solid var(--neon)" }}
+            />
             <div>
               <p className="text-foreground font-bold text-lg">Kleydir Mendes</p>
               <p className="text-neon text-sm font-semibold">CEO da Reeb Synapse</p>
