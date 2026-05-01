@@ -85,7 +85,7 @@ export function AIConsultingSection() {
 
             {/* CTA */}
             <a
-              href="https://wa.me/5591982540570"
+              href="https://wa.me/5591982540570?text=Olá!%20Quero%20minha%20consultoria%20gratuita%20de%20IA%20com%20o%20Kleydir.%20Tenho%20interesse%20em%20implementar%20inteligência%20artificial%20na%20minha%20empresa."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon inline-block w-full sm:w-auto px-8 py-4 text-base sm:text-lg text-center"

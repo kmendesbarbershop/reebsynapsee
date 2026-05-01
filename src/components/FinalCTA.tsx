@@ -44,7 +44,7 @@ export function FinalCTA() {
         </FadeInUp>
         <FadeInUp delay={0.3}>
           <a
-            href="https://wa.me/5591982540570"
+            href="https://wa.me/5591982540570?text=Olá!%20Quero%20começar%20agora%20e%20estruturar%20minha%20operação%20de%20vendas%20com%20a%20Reeb%20Synapse."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-neon inline-flex items-center gap-3 px-12 py-5 text-xl pulse-glow"
