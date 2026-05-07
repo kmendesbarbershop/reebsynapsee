@@ -68,7 +68,7 @@ export function AIConsultingSection() {
             {/* Benefits list */}
             <div className="w-full max-w-md text-left">
               <p className="text-foreground font-semibold text-sm mb-3">
-                O que você vai sair com:
+                Você vai sair com:
               </p>
               <ul className="space-y-3">
                 {benefits.map((b) => (
