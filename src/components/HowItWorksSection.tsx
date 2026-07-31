@@ -1,30 +1,41 @@
 import { FadeInUp } from "./FadeInUp";
-import { Search, Map, MessageSquare, TrendingUp } from "lucide-react";
+import { Search, BadgeCheck, MessageSquare, Target, TrendingUp } from "lucide-react";
 
 const steps = [
   {
     num: "01",
     Icon: Search,
     title: "Diagnóstico",
-    desc: "Mergulhamos no seu negócio para entender onde você está perdendo vendas e quais são as maiores oportunidades.",
+    desc: "Mapeamento gratuito de onde você está perdendo venda hoje.",
+    highlight: true,
   },
   {
     num: "02",
-    Icon: Map,
-    title: "Mapeamento",
-    desc: "Mapeamos seu público, concorrência e canais ideais para construir uma estratégia personalizada.",
+    Icon: BadgeCheck,
+    title: "Autoridade",
+    desc: "Conteúdo e presença que geram confiança em até 40 dias.",
+    highlight: true,
   },
   {
     num: "03",
     Icon: MessageSquare,
-    title: "Comunicação",
-    desc: "Produzimos vídeos, jingles e páginas com qualidade premium — conteúdo que conecta e convence.",
+    title: "Atendimento Inteligente",
+    desc: "Agente de IA humanizado, respondendo seu cliente 24h.",
+    highlight: false,
   },
   {
     num: "04",
+    Icon: Target,
+    title: "Aquisição",
+    desc: "Tráfego pago pra atrair cliente qualificado, não curioso.",
+    highlight: false,
+  },
+  {
+    num: "05",
     Icon: TrendingUp,
-    title: "Conversão",
-    desc: "Lançamos campanhas, medimos resultados e otimizamos continuamente para transformar atenção em venda.",
+    title: "Escala",
+    desc: "Landing page, CRM e gestão avançada conforme o negócio cresce.",
+    highlight: false,
   },
 ];
 
@@ -34,55 +45,61 @@ export function HowItWorksSection() {
       <div className="max-w-5xl mx-auto">
         <FadeInUp>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-            Um método simples. Um resultado claro.
+            O Sistema Synapse de Conversão
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.1}>
-          <p className="text-muted-custom text-lg mb-16 text-center max-w-2xl mx-auto">
-            A Reeb Synapse opera com 4 etapas comprovadas:
+          <p className="text-muted-custom text-lg mb-12 text-center max-w-2xl mx-auto">
+            Cada negócio entra por aqui. O resto vem conforme a necessidade real aparece.
           </p>
         </FadeInUp>
 
-        <div className="relative grid md:grid-cols-4 gap-8">
-          {/* Animated dashed connector — desktop only */}
-          <div
-            aria-hidden
-            className="hidden md:block absolute top-12 left-[12%] right-[12%] h-px"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(to right, #4ade80 0 8px, transparent 8px 16px)",
-              backgroundSize: "200% 100%",
-              animation: "dashFlow 3s linear infinite",
-              opacity: 0.6,
-            }}
-          />
-
+        <div className="flex flex-col gap-4">
           {steps.map((s, i) => (
-            <FadeInUp key={s.title} delay={0.15 + i * 0.12}>
-              <div className="relative text-center px-2">
-                <div className="relative z-10 flex justify-center mb-4">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center"
-                    style={{
-                      background: "var(--surface)",
-                      border: "1px solid rgba(74, 222, 128, 0.4)",
-                      boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)",
-                    }}
-                  >
-                    <s.Icon size={24} style={{ color: "#4ade80" }} />
-                  </div>
+            <FadeInUp key={s.title} delay={0.1 + i * 0.08}>
+              <div
+                className="flex items-start gap-5 rounded-xl p-5 sm:p-6"
+                style={{
+                  background: s.highlight
+                    ? "linear-gradient(90deg, rgba(0,71,255,0.18), rgba(0,71,255,0.04))"
+                    : "var(--surface)",
+                  border: s.highlight
+                    ? "1px solid var(--lime)"
+                    : "1px solid var(--card-border)",
+                  boxShadow: s.highlight ? "0 0 24px rgba(0,71,255,0.18)" : "none",
+                  opacity: s.highlight ? 1 : 0.55,
+                }}
+              >
+                <div
+                  className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center"
+                  style={{
+                    background: s.highlight ? "var(--brand)" : "rgba(0,71,255,0.12)",
+                  }}
+                >
+                  <s.Icon
+                    size={22}
+                    style={{ color: s.highlight ? "#F5F5F7" : "var(--neon)" }}
+                  />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 relative z-10">{s.title}</h3>
-                <p className="text-muted-custom text-sm relative z-10">{s.desc}</p>
+                <div className="text-left">
+                  <p
+                    className="text-xs font-bold tracking-widest mb-1"
+                    style={{ color: s.highlight ? "var(--lime)" : "var(--muted-text)" }}
+                  >
+                    ETAPA {s.num}
+                  </p>
+                  <h3 className="font-semibold text-lg mb-1">{s.title}</h3>
+                  <p className="text-muted-custom text-sm">{s.desc}</p>
+                </div>
               </div>
             </FadeInUp>
           ))}
         </div>
 
-        <FadeInUp delay={0.7}>
-          <p className="text-center text-lg mt-16 max-w-2xl mx-auto">
-            Enquanto outras agências criam conteúdo…{" "}
-            <span className="text-neon font-semibold">Nós criamos decisão de compra.</span>
+        <FadeInUp delay={0.6}>
+          <p className="text-muted-custom text-sm mt-8 text-center max-w-2xl mx-auto">
+            As etapas 3 a 5 são apresentadas depois do diagnóstico, quando fizer
+            sentido pro seu momento. Nada de empurrar sistema que você ainda não precisa.
           </p>
         </FadeInUp>
       </div>

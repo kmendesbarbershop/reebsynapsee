@@ -36,20 +36,21 @@ export function HeroSection() {
       <div className="relative max-w-3xl mx-auto text-center" style={{ zIndex: 10 }}>
         <FadeInUp delay={0.1}>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 font-[var(--font-heading)]">
-            <span className="text-foreground">Chega de Marketing que Não Vende.</span>
+            <span className="text-foreground">Sua Empresa Não Precisa de Mais Barulho.</span>
             <br />
-            <span className="text-neon">Aqui Você Constrói uma Operação de Vendas de Verdade.</span>
+            <span className="text-neon">Precisa de um Sistema Que Vende.</span>
           </h1>
         </FadeInUp>
 
         <FadeInUp delay={0.2}>
           <p className="text-lg sm:text-xl text-muted-custom mb-4 max-w-2xl mx-auto">
-            Estratégia, comunicação e conversão trabalhando juntas para fazer você vender mais — todos os dias.
+            Ajudamos negócios locais a venderem de forma mais consistente, começando
+            pela presença digital que gera autoridade e confiança — em 40 dias.
           </p>
         </FadeInUp>
 
         <FadeInUp delay={0.25}>
-          <p className="text-base font-bold mb-8" style={{ color: "#4ade80" }}>
+          <p className="text-base font-bold mb-8" style={{ color: "var(--lime)" }}>
             Vídeos que prendem. Músicas que marcam. Páginas que vendem.
           </p>
         </FadeInUp>
@@ -68,7 +69,7 @@ export function HeroSection() {
             <a
               href="#how-it-works"
               className="text-sm font-medium hover:underline transition-colors inline-flex items-center gap-1"
-              style={{ color: "#4ade80" }}
+              style={{ color: "#4D7CFF" }}
             >
               <ArrowDown size={14} />
               Ver como funciona

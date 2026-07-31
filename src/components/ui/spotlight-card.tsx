@@ -13,7 +13,7 @@ interface GlowCardProps {
 const glowColorMap = {
   blue: { base: 220, spread: 200 },
   purple: { base: 280, spread: 300 },
-  green: { base: 120, spread: 200 },
+  green: { base: 225, spread: 60 },
   red: { base: 0, spread: 200 },
   orange: { base: 30, spread: 200 }
 };
@@ -63,8 +63,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--spread': spread,
       '--radius': '14',
       '--border': '2',
-      '--backdrop': 'rgba(10, 26, 10, 0.6)',
-      '--backup-border': 'rgba(74, 222, 128, 0.15)',
+      '--backdrop': 'rgba(26, 26, 46, 0.6)',
+      '--backup-border': 'rgba(0, 71, 255, 0.15)',
       '--size': '250',
       '--outer': '1',
       '--border-size': 'calc(var(--border, 2) * 1px)',
@@ -110,7 +110,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       background-image: radial-gradient(
         calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
         calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-        hsl(120 80% 55% / 0.9), transparent 100%
+        hsl(225 100% 60% / 0.9), transparent 100%
       );
       filter: brightness(2);
     }
