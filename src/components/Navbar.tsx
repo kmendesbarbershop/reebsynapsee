@@ -1,7 +1,7 @@
 export function Navbar() {
   return (
     <>
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1a0a]/90 backdrop-blur-md border-b border-card">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1A1A2E]/90 backdrop-blur-md border-b border-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-center">
         <div className="leading-tight text-center">
           <span className="block text-2xl sm:text-3xl font-black tracking-widest text-neon">REEB</span>

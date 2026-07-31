@@ -10,7 +10,7 @@ export function FinalCTA() {
         className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-black tracking-tighter"
         style={{
           fontSize: "clamp(8rem, 30vw, 22rem)",
-          color: "rgba(74, 222, 128, 0.04)",
+          color: "rgba(0, 71, 255, 0.04)",
           lineHeight: 1,
         }}
       >
@@ -31,7 +31,7 @@ export function FinalCTA() {
         <FadeInUp delay={0.15}>
           <p
             className="text-base sm:text-lg font-medium mb-8"
-            style={{ color: "rgba(74, 222, 128, 0.6)" }}
+            style={{ color: "rgba(0, 71, 255, 0.6)" }}
           >
             Cada dia sem estrutura é um dia perdendo dinheiro.
           </p>
@@ -57,8 +57,8 @@ export function FinalCTA() {
 
       <style>{`
         @keyframes ctaPulseGlow {
-          0%, 100% { box-shadow: 0 0 10px rgba(74, 222, 128, 0.4); }
-          50% { box-shadow: 0 0 30px rgba(74, 222, 128, 0.7); }
+          0%, 100% { box-shadow: 0 0 10px rgba(0, 71, 255, 0.4); }
+          50% { box-shadow: 0 0 30px rgba(0, 71, 255, 0.7); }
         }
         .pulse-glow {
           animation: ctaPulseGlow 2.5s ease-in-out infinite;

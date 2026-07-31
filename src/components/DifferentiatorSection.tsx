@@ -17,8 +17,8 @@ export function DifferentiatorSection() {
             className="mx-auto mb-8 h-px w-32"
             style={{
               background:
-                "linear-gradient(to right, transparent, #4ade80, transparent)",
-              boxShadow: "0 0 12px rgba(74, 222, 128, 0.6)",
+                "linear-gradient(to right, transparent, #4D7CFF, transparent)",
+              boxShadow: "0 0 12px rgba(0, 71, 255, 0.6)",
             }}
           />
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">

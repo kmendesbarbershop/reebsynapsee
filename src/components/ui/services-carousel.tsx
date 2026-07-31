@@ -143,8 +143,8 @@ export const ServicesCarousel: React.FC = () => {
                     ? isMobile
                       ? "rgba(5,16,31,0.95)"
                       : "transparent"
-                    : "rgba(10, 20, 12, 0.6)",
-                  border: "1px solid rgba(74,222,128,0.15)",
+                    : "rgba(26, 26, 46, 0.6)",
+                  border: "1px solid rgba(0,71,255,0.15)",
                   boxShadow: "none",
                   backdropFilter: isMobile ? "none" : undefined,
                   WebkitBackdropFilter: isMobile ? "none" : undefined,
@@ -155,12 +155,12 @@ export const ServicesCarousel: React.FC = () => {
                 }}
                 onMouseEnter={(e) => {
                   if (isMobile) return;
-                  e.currentTarget.style.borderColor = "rgba(74,222,128,0.5)";
-                  e.currentTarget.style.boxShadow = "0 0 20px rgba(74,222,128,0.1)";
+                  e.currentTarget.style.borderColor = "rgba(0,71,255,0.5)";
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(0,71,255,0.1)";
                 }}
                 onMouseLeave={(e) => {
                   if (isMobile) return;
-                  e.currentTarget.style.borderColor = "rgba(74,222,128,0.15)";
+                  e.currentTarget.style.borderColor = "rgba(0,71,255,0.15)";
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
@@ -198,7 +198,7 @@ export const ServicesCarousel: React.FC = () => {
                         background:
                           service.id === "jingles" || service.id === "landing" || service.id === "campanhas"
                             ? "rgba(0,0,0,0.60)"
-                            : "linear-gradient(180deg, transparent 0%, rgba(10,20,12,0.25) 45%, rgba(10,20,12,0.85) 100%)",
+                            : "linear-gradient(180deg, transparent 0%, rgba(26,26,46,0.25) 45%, rgba(26,26,46,0.85) 100%)",
                       }}
                     />
                   </>
@@ -225,9 +225,9 @@ export const ServicesCarousel: React.FC = () => {
                       letterSpacing: "0.1em",
                       padding: "4px 8px",
                       borderRadius: 999,
-                      color: "#4ade80",
-                      border: "1px solid rgba(74, 222, 128, 0.4)",
-                      background: "rgba(74, 222, 128, 0.08)",
+                      color: "#4D7CFF",
+                      border: "1px solid rgba(0, 71, 255, 0.4)",
+                      background: "rgba(0, 71, 255, 0.08)",
                     }}
                   >
                     {service.tag}
@@ -239,13 +239,13 @@ export const ServicesCarousel: React.FC = () => {
                     width: 48,
                     height: 48,
                     borderRadius: 12,
-                    background: "rgba(74,222,128,0.1)",
+                    background: "rgba(0,71,255,0.1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
-                  <Icon size={24} style={{ color: "#4ade80" }} />
+                  <Icon size={24} style={{ color: "#4D7CFF" }} />
                 </div>
 
                 <h3 className="font-semibold text-lg text-foreground">

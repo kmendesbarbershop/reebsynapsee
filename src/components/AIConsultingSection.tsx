@@ -53,7 +53,7 @@ export function AIConsultingSection() {
               src={ceoImage}
               alt="Kleydir Mendes — CEO da Reeb Synapse"
               className="w-24 h-24 rounded-full object-cover mx-auto"
-              style={{ border: "3px solid var(--neon)", boxShadow: "0 0 16px rgba(74,222,128,0.4)" }}
+              style={{ border: "3px solid var(--neon)", boxShadow: "0 0 16px rgba(0,71,255,0.4)" }}
             />
             <div>
               <p className="text-foreground font-bold text-lg">Kleydir Mendes</p>
@@ -75,7 +75,7 @@ export function AIConsultingSection() {
                   <li key={b} className="flex items-start gap-3">
                     <Check
                       size={20}
-                      style={{ color: "#4ade80", flexShrink: 0, marginTop: 2 }}
+                      style={{ color: "#4D7CFF", flexShrink: 0, marginTop: 2 }}
                     />
                     <span className="text-foreground text-base">{b}</span>
                   </li>

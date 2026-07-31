@@ -49,7 +49,7 @@ export function HeroSection() {
         </FadeInUp>
 
         <FadeInUp delay={0.25}>
-          <p className="text-base font-bold mb-8" style={{ color: "#4ade80" }}>
+          <p className="text-base font-bold mb-8" style={{ color: "#4D7CFF" }}>
             Vídeos que prendem. Músicas que marcam. Páginas que vendem.
           </p>
         </FadeInUp>
@@ -68,7 +68,7 @@ export function HeroSection() {
             <a
               href="#how-it-works"
               className="text-sm font-medium hover:underline transition-colors inline-flex items-center gap-1"
-              style={{ color: "#4ade80" }}
+              style={{ color: "#4D7CFF" }}
             >
               <ArrowDown size={14} />
               Ver como funciona

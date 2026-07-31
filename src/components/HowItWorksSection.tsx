@@ -50,7 +50,7 @@ export function HowItWorksSection() {
             className="hidden md:block absolute top-12 left-[12%] right-[12%] h-px"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(to right, #4ade80 0 8px, transparent 8px 16px)",
+                "repeating-linear-gradient(to right, #4D7CFF 0 8px, transparent 8px 16px)",
               backgroundSize: "200% 100%",
               animation: "dashFlow 3s linear infinite",
               opacity: 0.6,
@@ -65,11 +65,11 @@ export function HowItWorksSection() {
                     className="w-14 h-14 rounded-full flex items-center justify-center"
                     style={{
                       background: "var(--surface)",
-                      border: "1px solid rgba(74, 222, 128, 0.4)",
-                      boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)",
+                      border: "1px solid rgba(0, 71, 255, 0.4)",
+                      boxShadow: "0 0 20px rgba(0, 71, 255, 0.2)",
                     }}
                   >
-                    <s.Icon size={24} style={{ color: "#4ade80" }} />
+                    <s.Icon size={24} style={{ color: "#4D7CFF" }} />
                   </div>
                 </div>
                 <h3 className="font-semibold text-lg mb-2 relative z-10">{s.title}</h3>
