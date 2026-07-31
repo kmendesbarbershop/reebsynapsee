@@ -22,9 +22,9 @@ export function FreeOfferCTA() {
             <span
               className="inline-flex items-center gap-2 text-xs font-bold tracking-wider px-4 py-2 rounded-full"
               style={{
-                color: "#4D7CFF",
-                border: "1px solid rgba(0, 71, 255, 0.4)",
-                background: "rgba(0, 71, 255, 0.08)",
+                color: "#B6FF00",
+                border: "1px solid rgba(182, 255, 0, 0.4)",
+                background: "rgba(182, 255, 0, 0.08)",
               }}
             >
               <Target size={14} />
@@ -40,7 +40,7 @@ export function FreeOfferCTA() {
                 <li key={b} className="flex items-start gap-3">
                   <Check
                     size={20}
-                    style={{ color: "#4D7CFF", flexShrink: 0, marginTop: 2 }}
+                    style={{ color: "#B6FF00", flexShrink: 0, marginTop: 2 }}
                   />
                   <span className="text-foreground text-base">{b}</span>
                 </li>
