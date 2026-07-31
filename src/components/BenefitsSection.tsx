@@ -47,12 +47,12 @@ export function BenefitsSection() {
                 className="w-full min-h-[160px] flex flex-col gap-3 text-left"
               >
                 <div className="flex items-center gap-3">
-                  <item.Icon size={24} style={{ color: "#4D7CFF" }} />
+                  <item.Icon size={24} style={{ color: "var(--neon)" }} />
                   <h3 className="font-semibold text-base text-muted-custom">{item.title}</h3>
                 </div>
                 <p
                   className="text-2xl sm:text-3xl font-bold"
-                  style={{ color: "#4D7CFF" }}
+                  style={{ color: "var(--lime)" }}
                 >
                   {item.metric}
                 </p>
