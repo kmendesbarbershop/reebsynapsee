@@ -143,7 +143,7 @@ export const ServicesCarousel: React.FC = () => {
                       ? "rgba(5,16,31,0.95)"
                       : "transparent"
                     : "rgba(26, 26, 46, 0.6)",
-                  border: "1px solid rgba(0,71,255,0.15)",
+                  border: "1px solid rgba(182,255,0,0.15)",
                   boxShadow: "none",
                   backdropFilter: isMobile ? "none" : undefined,
                   WebkitBackdropFilter: isMobile ? "none" : undefined,
@@ -154,12 +154,12 @@ export const ServicesCarousel: React.FC = () => {
                 }}
                 onMouseEnter={(e) => {
                   if (isMobile) return;
-                  e.currentTarget.style.borderColor = "rgba(0,71,255,0.5)";
-                  e.currentTarget.style.boxShadow = "0 0 20px rgba(0,71,255,0.1)";
+                  e.currentTarget.style.borderColor = "rgba(182,255,0,0.5)";
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(182,255,0,0.1)";
                 }}
                 onMouseLeave={(e) => {
                   if (isMobile) return;
-                  e.currentTarget.style.borderColor = "rgba(0,71,255,0.15)";
+                  e.currentTarget.style.borderColor = "rgba(182,255,0,0.15)";
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
@@ -224,9 +224,9 @@ export const ServicesCarousel: React.FC = () => {
                       letterSpacing: "0.1em",
                       padding: "4px 8px",
                       borderRadius: 999,
-                      color: "#4D7CFF",
-                      border: "1px solid rgba(0, 71, 255, 0.4)",
-                      background: "rgba(0, 71, 255, 0.08)",
+                      color: "#B6FF00",
+                      border: "1px solid rgba(182, 255, 0, 0.4)",
+                      background: "rgba(182, 255, 0, 0.08)",
                     }}
                   >
                     {service.tag}
@@ -238,13 +238,13 @@ export const ServicesCarousel: React.FC = () => {
                     width: 48,
                     height: 48,
                     borderRadius: 12,
-                    background: "rgba(0,71,255,0.1)",
+                    background: "rgba(182,255,0,0.1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
-                  <Icon size={24} style={{ color: "#4D7CFF" }} />
+                  <Icon size={24} style={{ color: "#B6FF00" }} />
                 </div>
 
                 <h3 className="font-semibold text-lg text-foreground">

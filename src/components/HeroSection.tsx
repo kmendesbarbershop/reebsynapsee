@@ -11,7 +11,7 @@ export function HeroSection() {
         style={{
           zIndex: 0,
           background:
-            "radial-gradient(ellipse at center, rgba(10,26,10,0.6) 0%, rgba(0,0,0,0.85) 80%)",
+            "radial-gradient(ellipse at center, rgba(20,20,20,0.6) 0%, rgba(0,0,0,0.85) 80%)",
         }}
         aria-hidden="true"
       />
@@ -69,7 +69,7 @@ export function HeroSection() {
             <a
               href="#how-it-works"
               className="text-sm font-medium hover:underline transition-colors inline-flex items-center gap-1"
-              style={{ color: "#4D7CFF" }}
+              style={{ color: "#B6FF00" }}
             >
               <ArrowDown size={14} />
               Ver como funciona

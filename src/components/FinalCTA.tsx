@@ -10,7 +10,7 @@ export function FinalCTA() {
         className="pointer-events-none select-none absolute inset-0 flex items-center justify-center font-black tracking-tighter"
         style={{
           fontSize: "clamp(8rem, 30vw, 22rem)",
-          color: "rgba(0, 71, 255, 0.10)",
+          color: "rgba(182, 255, 0, 0.10)",
           lineHeight: 1,
         }}
       >
@@ -57,7 +57,7 @@ export function FinalCTA() {
 
       <style>{`
         @keyframes ctaPulseGlow {
-          0%, 100% { box-shadow: 0 0 10px rgba(0, 71, 255, 0.45); }
+          0%, 100% { box-shadow: 0 0 10px rgba(182, 255, 0, 0.45); }
           50% { box-shadow: 0 0 30px rgba(182, 255, 0, 0.5); }
         }
         .pulse-glow {
