@@ -7,6 +7,7 @@ import { BenefitsSection } from "./components/BenefitsSection";
 import { DifferentiatorSection } from "./components/DifferentiatorSection";
 import { AIConsultingSection } from "./components/AIConsultingSection";
 import { FreeOfferCTA } from "./components/FreeOfferCTA";
+import { FAQSection } from "./components/FAQSection";
 import { FinalCTA } from "./components/FinalCTA";
 import { Footer } from "./components/Footer";
 
@@ -22,6 +23,7 @@ function App() {
       <DifferentiatorSection />
       <AIConsultingSection />
       <FreeOfferCTA />
+      <FAQSection />
       <FinalCTA />
       <Footer />
     </>
