@@ -8,7 +8,7 @@ const services = [
     tag: "IA POWERED",
     title: "Vídeos publicitários com IA",
     description:
-      "Conteúdo visual produzido com inteligência artificial — mais rápido, mais criativo e feito para converter.",
+      "Vídeos que prendem atenção nos primeiros 3 segundos e conduzem até a decisão de compra.",
     video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320878/copy_C7664BD2-BFBC-48F0-8712-9FDBD1171685_m3y1lb.mov",
   },
   {
@@ -17,7 +17,7 @@ const services = [
     tag: null,
     title: "Jingles estratégicos e memoráveis",
     description:
-      "Áudio que gruda na cabeça do seu cliente e faz sua marca ser lembrada na hora certa.",
+      "Músicas que ficam na cabeça do seu cliente — e na hora de decidir, ele lembra de você.",
     video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/freepik_quero-um-vdeo-animado-_kling_720p_16-9_24fps_33315_eryosd.mp4",
   },
   {
@@ -25,8 +25,7 @@ const services = [
     icon: Layout,
     tag: null,
     title: "Landing pages de alta conversão",
-    description:
-      "Páginas construídas com foco em uma única missão: transformar visitante em comprador.",
+    description: "Páginas feitas pra vender, não só pra existir.",
     video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/copy_0EF91E3E-BD87-4AFB-B695-34DBA9B75DE2_a3ifdg.mov",
   },
   {
@@ -35,7 +34,7 @@ const services = [
     tag: "IA POWERED",
     title: "Campanhas de tráfego pago otimizadas",
     description:
-      "Anúncios no Meta e Google com segmentação inteligente e otimização contínua.",
+      "Tráfego qualificado, direcionado pra quem já tá pronto pra comprar — não pra qualquer clique.",
     video: "https://res.cloudinary.com/dtos5kljq/video/upload/v1777320861/freepik_quero-um-video-animado-de_2865515716_doknwb.mp4",
   },
 ];
@@ -96,7 +95,7 @@ export const ServicesCarousel: React.FC = () => {
     <div className="w-full max-w-6xl mx-auto">
       <div className="mb-8 px-4">
         <p className="text-muted-custom text-base sm:text-lg max-w-2xl text-left">
-          Na Reeb Synapse, criamos um ecossistema que transforma atenção em venda.
+          Cada peça faz parte de um sistema — não são ações isoladas.
         </p>
       </div>
 
