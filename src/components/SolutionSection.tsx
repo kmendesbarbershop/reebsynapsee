@@ -7,7 +7,7 @@ export function SolutionSection() {
       <div className="max-w-6xl mx-auto text-center">
         <FadeInUp>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Um sistema completo de conversão
+            O que a Reeb executa por você
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.15}>
