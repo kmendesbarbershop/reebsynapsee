@@ -156,14 +156,14 @@
   --tracking-normal: 0.025em;
   --spacing: 0.25rem;
 
-  /* Grid texture — adapted to new green */
-  --grid-color: oklch(0.4907 0.1257 152.3495 / 0.08);
+  /* Grid texture */
+  --grid-color: rgba(0, 71, 255, 0.08);
   --grid-size: 60px;
 
-  /* Glow — using new neon green */
-  --glow-sm: 0 0 10px oklch(0.8478 0.1216 151.6321 / 0.3);
-  --glow-md: 0 0 20px oklch(0.8478 0.1216 151.6321 / 0.4);
-  --glow-lg: 0 0 40px oklch(0.8478 0.1216 151.6321 / 0.3);
+  /* Glow */
+  --glow-sm: 0 0 10px rgba(0, 71, 255, 0.35);
+  --glow-md: 0 0 20px rgba(0, 71, 255, 0.5);
+  --glow-lg: 0 0 40px rgba(0, 71, 255, 0.4);
 }
 
 @layer base {
@@ -190,6 +190,12 @@
 @layer utilities {
   .text-neon {
     color: var(--neon);
+  }
+  .text-lime {
+    color: var(--lime);
+  }
+  .border-lime {
+    border-color: var(--lime);
   }
   .bg-neon {
     background-color: var(--neon);
@@ -219,16 +225,17 @@
     box-shadow: var(--glow-lg);
   }
   .btn-neon {
-    background-color: var(--neon);
-    color: var(--neon-foreground);
+    background-color: var(--brand);
+    color: #F5F5F7;
     font-weight: 600;
     border-radius: var(--radius);
     transition: all 0.2s ease;
     box-shadow: var(--glow-sm);
   }
   .btn-neon:hover {
-    filter: brightness(1.1);
-    box-shadow: var(--glow-md);
+    background-color: var(--lime);
+    color: #1A1A2E;
+    box-shadow: 0 0 24px rgba(182, 255, 0, 0.45);
   }
   .glass-card {
     background: var(--surface);
@@ -237,7 +244,7 @@
     backdrop-filter: blur(8px);
   }
   .pill-badge {
-    border: 1px solid var(--neon);
+    border: 1px solid var(--brand);
     color: var(--neon);
     background: transparent;
     border-radius: 9999px;
@@ -249,15 +256,15 @@
   }
   .timeline-line {
     width: 2px;
-    background: linear-gradient(to bottom, var(--neon), var(--neon-secondary));
-    box-shadow: 0 0 12px rgba(74, 222, 128, 0.5);
+    background: linear-gradient(to bottom, var(--neon), var(--brand));
+    box-shadow: 0 0 12px rgba(0, 71, 255, 0.5);
   }
   .timeline-dot {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--neon);
-    box-shadow: 0 0 12px rgba(74, 222, 128, 0.6);
+    background: var(--brand);
+    box-shadow: 0 0 12px rgba(0, 71, 255, 0.6);
   }
 }
 
@@ -268,8 +275,8 @@
     box-shadow: -4px 0 12px -2px rgba(255, 68, 68, 0.6);
   }
   50% {
-    border-left-color: #4ade80;
-    box-shadow: -4px 0 12px -2px rgba(74, 222, 128, 0.6);
+    border-left-color: #0047FF;
+    box-shadow: -4px 0 12px -2px rgba(0, 71, 255, 0.6);
   }
 }
 
