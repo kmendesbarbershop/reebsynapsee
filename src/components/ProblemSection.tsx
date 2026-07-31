@@ -5,18 +5,18 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 const painPoints = [
   {
     Icon: TrendingDown,
-    title: "Tráfego sem conversão",
-    desc: "Você paga por cliques que nunca viram clientes.",
+    title: "Post bonito, criativo caro",
+    desc: "Investimento alto que não vira cliente no fim do mês.",
   },
   {
     Icon: Megaphone,
-    title: "Comunicação sem conexão",
-    desc: "Sua mensagem não diferencia, não convence, não vende.",
+    title: "Atenção sem estrutura",
+    desc: "Plateia aplaudindo um negócio que não sabe vender.",
   },
   {
     Icon: Repeat,
-    title: "Campanhas sem estrutura",
-    desc: "Anúncios no ar sem estratégia real de conversão.",
+    title: "Tráfego e influenciador",
+    desc: "Barulho sem sistema por trás. E barulho não paga boleto.",
   },
 ];
 
@@ -26,12 +26,14 @@ export function ProblemSection() {
       <div className="max-w-5xl mx-auto">
         <FadeInUp>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-            Vamos ser honestos.
+            Vamos ser honestos com você.
           </h2>
         </FadeInUp>
         <FadeInUp delay={0.1}>
           <p className="text-muted-custom text-lg mb-12 text-center max-w-2xl mx-auto">
-            Quantas vezes você investiu em marketing e não soube explicar por que não vendeu?
+            Quantas vezes você investiu em marketing e não soube explicar por que
+            não vendeu? Post bonito, criativo caro, influenciador, tráfego pago —
+            tudo isso sem estrutura é só barulho.
           </p>
         </FadeInUp>
 
@@ -54,6 +56,15 @@ export function ProblemSection() {
         <FadeInUp delay={0.4}>
           <p className="text-2xl sm:text-3xl font-bold text-neon text-center">
             E barulho não paga boleto.
+          </p>
+        </FadeInUp>
+        <FadeInUp delay={0.5}>
+          <p className="text-muted-custom text-lg mt-6 text-center max-w-2xl mx-auto">
+            Todo negócio quer atenção. Mas atenção sem estrutura é só plateia
+            aplaudindo um negócio que não sabe vender.{" "}
+            <span className="text-foreground font-semibold">
+              A Reeb Synapse conecta essa atenção a um sistema que vende de verdade.
+            </span>
           </p>
         </FadeInUp>
       </div>
