@@ -61,24 +61,24 @@ export function HowItWorksSection() {
                 className="flex items-start gap-5 rounded-xl p-5 sm:p-6"
                 style={{
                   background: s.highlight
-                    ? "linear-gradient(90deg, rgba(0,71,255,0.18), rgba(0,71,255,0.04))"
+                    ? "linear-gradient(90deg, #1c1c1c, #121212)"
                     : "var(--surface)",
                   border: s.highlight
                     ? "1px solid var(--lime)"
                     : "1px solid var(--card-border)",
-                  boxShadow: s.highlight ? "0 0 24px rgba(0,71,255,0.18)" : "none",
+                  boxShadow: s.highlight ? "0 0 24px rgba(182,255,0,0.18)" : "none",
                   opacity: s.highlight ? 1 : 0.55,
                 }}
               >
                 <div
                   className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center"
                   style={{
-                    background: s.highlight ? "var(--brand)" : "rgba(0,71,255,0.12)",
+                    background: s.highlight ? "var(--lime)" : "rgba(182,255,0,0.10)",
                   }}
                 >
                   <s.Icon
                     size={22}
-                    style={{ color: s.highlight ? "#F5F5F7" : "var(--neon)" }}
+                    style={{ color: s.highlight ? "#0a0a0a" : "var(--neon)" }}
                   />
                 </div>
                 <div className="text-left">
