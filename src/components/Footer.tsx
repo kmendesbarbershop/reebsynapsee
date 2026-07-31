@@ -12,7 +12,7 @@ export function Footer() {
 
         <div
           className="h-px w-full max-w-2xl mx-auto mb-6"
-          style={{ background: "rgba(0, 71, 255, 0.2)" }}
+          style={{ background: "rgba(182, 255, 0, 0.15)" }}
         />
 
         <p className="text-xs text-muted-custom">

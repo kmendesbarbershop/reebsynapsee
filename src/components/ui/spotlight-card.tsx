@@ -64,7 +64,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--radius': '14',
       '--border': '2',
       '--backdrop': 'rgba(26, 26, 46, 0.6)',
-      '--backup-border': 'rgba(0, 71, 255, 0.15)',
+      '--backup-border': 'rgba(182, 255, 0, 0.15)',
       '--size': '250',
       '--outer': '1',
       '--border-size': 'calc(var(--border, 2) * 1px)',
