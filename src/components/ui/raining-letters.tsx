@@ -81,7 +81,7 @@ export const RainingLettersBackground: React.FC = () => {
             style={{
               left: `${char.x}%`,
               top: `${char.y}%`,
-              color: isActive ? "#4D7CFF" : "#1a3a1a",
+              color: isActive ? "#4D7CFF" : "#232346",
               textShadow: isActive
                 ? "0 0 8px #4D7CFF, 0 0 12px rgba(0,71,255,0.6)"
                 : "none",
