@@ -4,9 +4,9 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 import ceoImage from "@/assets/ceo-kleydir.jpg";
 
 const benefits = [
-  "Mapa das ferramentas certas para seu negócio",
-  "Plano de implementação passo a passo",
-  "Estimativa de economia de tempo e dinheiro",
+  "Onde seu negócio está perdendo venda hoje",
+  "Quais etapas do Sistema Synapse fazem sentido pra você agora",
+  "Um próximo passo claro, no seu ritmo",
   "Sem compromisso de contratação",
 ];
 
@@ -23,22 +23,13 @@ export function AIConsultingSection() {
 
         <FadeInUp delay={0.1}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Sua empresa ainda opera no manual?
+            Uma Conversa, Sem Compromisso, com Quem Já Passou Pelo Que Você Tá Passando
           </h2>
         </FadeInUp>
 
         <FadeInUp delay={0.15}>
           <p className="text-lg sm:text-xl font-semibold text-neon max-w-2xl">
-            A IA já está transformando negócios como o seu. A questão não é se
-            você vai implementar — é quando e com quem.
-          </p>
-        </FadeInUp>
-
-        <FadeInUp delay={0.2}>
-          <p className="text-muted-custom text-base sm:text-lg max-w-2xl leading-relaxed">
-            Atendimento que responde sozinho. Cobranças automáticas. Vendas sem
-            depender de vendedor. Treinamentos que rodam sem você. Tudo isso já
-            existe. E está ao alcance da sua empresa — hoje.
+            Bora conversar 15 minutos sobre onde você tá perdendo venda hoje?
           </p>
         </FadeInUp>
 
@@ -60,9 +51,10 @@ export function AIConsultingSection() {
               <p className="text-neon text-sm font-semibold">CEO da Reeb Synapse</p>
             </div>
             <p className="text-muted-custom text-base leading-relaxed max-w-md">
-              Em 1 hora de consultoria gratuita, vou mostrar exatamente quais
-              ferramentas de IA fazem sentido para o seu negócio — sem
-              enrolação, sem vender curso.
+              Eu sou o Kleydir. Antes de fundar a Reeb Synapse, eu tinha uma
+              barbearia. Sei o que é vender de forma inconsistente e não saber se
+              vai bater a meta do mês. Foi resolvendo isso no meu próprio negócio
+              que eu construí o Sistema Synapse.
             </p>
 
             {/* Benefits list */}
@@ -85,17 +77,17 @@ export function AIConsultingSection() {
 
             {/* CTA */}
             <a
-              href="https://wa.me/5591982540570?text=Olá!%20Quero%20minha%20consultoria%20gratuita%20de%20IA%20com%20o%20Kleydir.%20Tenho%20interesse%20em%20implementar%20inteligência%20artificial%20na%20minha%20empresa."
+              href="https://wa.me/5591982540570?text=Olá!%20Quero%20minha%20consultoria%20gratuita%20com%20o%20Kleydir.%20Tenho%20interesse%20em%20entender%20onde%20estou%20perdendo%20vendas."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon inline-block w-full sm:w-auto px-8 py-4 text-base sm:text-lg text-center"
             >
-              👉 QUERO MINHA CONSULTORIA GRATUITA DE IA
+              Quero minha consultoria gratuita
             </a>
 
             <p
               className="text-sm font-medium inline-flex items-center gap-2"
-              style={{ color: "#f97316" }}
+              style={{ color: "var(--lime)" }}
             >
               <Zap size={14} />
               Apenas 3 vagas por semana — atendimento personalizado com o CEO
