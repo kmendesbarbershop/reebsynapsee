@@ -45,7 +45,7 @@ export function ProblemSection() {
                 customSize={true}
                 className="w-full h-full min-h-[140px] flex flex-col gap-2 border-l-4 alert-pulse"
               >
-                <p.Icon size={28} style={{ color: "#ff8800" }} />
+                <p.Icon size={28} style={{ color: "var(--neon)" }} />
                 <h3 className="font-semibold text-lg">{p.title}</h3>
                 <p className="text-muted-custom text-sm">{p.desc}</p>
               </GlowCard>
