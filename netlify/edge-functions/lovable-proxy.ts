@@ -7,52 +7,24 @@ const HOP_BY_HOP_HEADERS = ['content-length', 'content-encoding', 'transfer-enco
 const BADGE_REMOVER_SCRIPT = `
 <script>
 (function () {
-  function shouldHide(el) {
-    if (!el || el.nodeType !== 1) return false;
-    var href = '';
-    if (el.getAttribute) {
-      href = el.getAttribute('href') || el.getAttribute('src') || '';
-    }
-    if (href.indexOf('lovable.dev') !== -1) return true;
-    if (el.childElementCount <= 2) {
-      var text = (el.textContent || '').trim();
-      if (text === 'Lovable' || text.indexOf('Edit with Lovable') !== -1) return true;
-    }
-    return false;
-  }
+  var BADGE_ID = 'lovable-badge';
 
-  function hideElement(el) {
+  function hideBadge() {
+    var el = document.getElementById(BADGE_ID);
+    if (!el) return false;
     el.style.setProperty('display', 'none', 'important');
-    if (el.setAttribute) el.setAttribute('data-lovable-badge-hidden', 'true');
+    return true;
   }
 
-  function scan(root) {
-    if (!root || root.nodeType !== 1 && root.nodeType !== 9) return;
-    if (root.nodeType === 1 && shouldHide(root)) {
-      hideElement(root);
-      return;
-    }
-    if (!root.querySelectorAll) return;
-    var candidates = root.querySelectorAll('a, [href], [src], div, span, button, footer, aside, section');
-    for (var i = 0; i < candidates.length; i++) {
-      var el = candidates[i];
-      if (el.getAttribute && el.getAttribute('data-lovable-badge-hidden') === 'true') continue;
-      if (shouldHide(el)) hideElement(el);
-    }
-  }
-
-  scan(document);
-
-  var observer = new MutationObserver(function (mutations) {
-    for (var m = 0; m < mutations.length; m++) {
-      var addedNodes = mutations[m].addedNodes;
-      for (var n = 0; n < addedNodes.length; n++) {
-        scan(addedNodes[n]);
+  if (!hideBadge()) {
+    var observer = new MutationObserver(function () {
+      if (hideBadge()) {
+        observer.disconnect();
       }
-    }
-  });
+    });
 
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  }
 })();
 </script>
 `
