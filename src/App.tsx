@@ -17,6 +17,7 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <HowItWorksSection />
+      <MethodTransitionHero />
       <BenefitsSection />
       <FreeOfferCTA />
       <FAQSection />

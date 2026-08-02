@@ -127,8 +127,7 @@ export function HowItWorksSection() {
 
         <FadeInUp delay={0.6}>
           <p className="text-muted-custom text-sm mt-8 text-center max-w-2xl mx-auto">
-            As etapas 3 a 5 são apresentadas depois do diagnóstico, quando fizer
-            sentido pro seu momento. Nada de empurrar sistema que você ainda não precisa.
+            Cada etapa é ativada conforme a necessidade real do seu negócio.
           </p>
         </FadeInUp>
       </div>
