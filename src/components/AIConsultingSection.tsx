@@ -21,18 +21,6 @@ export function AIConsultingSection() {
           </span>
         </FadeInUp>
 
-        <FadeInUp delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Uma Conversa, Sem Compromisso, com Quem Já Passou Pelo Que Você Tá Passando
-          </h2>
-        </FadeInUp>
-
-        <FadeInUp delay={0.15}>
-          <p className="text-lg sm:text-xl font-semibold text-neon max-w-2xl">
-            Bora conversar 15 minutos sobre onde você tá perdendo venda hoje?
-          </p>
-        </FadeInUp>
-
         <FadeInUp delay={0.25}>
           <GlowCard
             glowColor="green"

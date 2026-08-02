@@ -1,5 +1,5 @@
 import { FadeInUp } from "./FadeInUp";
-import { Check, Target, Clock } from "lucide-react";
+import { Check, Target } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const benefits = [
@@ -55,13 +55,6 @@ export function FreeOfferCTA() {
             >
               Quero meu diagnóstico gratuito
             </a>
-            <p
-              className="text-sm font-medium inline-flex items-center gap-2"
-              style={{ color: "var(--lime)" }}
-            >
-              <Clock size={14} />
-              Apenas 5 vagas disponíveis por semana
-            </p>
           </GlowCard>
         </FadeInUp>
       </div>
