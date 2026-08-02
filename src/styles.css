@@ -289,7 +289,7 @@
 /* === MOBILE PERFORMANCE OPTIMIZATIONS === */
 @media (max-width: 768px) {
   /* Reduce heavy animations/transitions on mobile, but keep the marquee running */
-  *:not(.services-marquee-track):not(.services-marquee):not(.alert-pulse) {
+  *:not(.services-marquee-track):not(.services-marquee):not(.alert-pulse):not(.synapse-node-pulse) {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
