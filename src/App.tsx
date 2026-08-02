@@ -3,6 +3,7 @@ import { HeroSection } from "./components/HeroSection";
 import { ProblemSection } from "./components/ProblemSection";
 import { SolutionSection } from "./components/SolutionSection";
 import { HowItWorksSection } from "./components/HowItWorksSection";
+import { MethodTransitionHero } from "./components/MethodTransitionHero";
 import { BenefitsSection } from "./components/BenefitsSection";
 import { FreeOfferCTA } from "./components/FreeOfferCTA";
 import { FAQSection } from "./components/FAQSection";
@@ -17,6 +18,7 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <HowItWorksSection />
+      <MethodTransitionHero />
       <BenefitsSection />
       <FreeOfferCTA />
       <FAQSection />
