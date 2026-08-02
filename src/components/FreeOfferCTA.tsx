@@ -1,5 +1,5 @@
 import { FadeInUp } from "./FadeInUp";
-import { Check, Target, Clock } from "lucide-react";
+import { Check, Target } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const benefits = [
