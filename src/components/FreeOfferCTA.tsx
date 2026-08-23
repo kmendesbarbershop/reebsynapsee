@@ -48,7 +48,7 @@ export function FreeOfferCTA() {
             </ul>
 
             <a
-              href="https://wa.me/5591982540570?text=Olá!%20Quero%20meu%20diagnóstico%20gratuito%20para%20descobrir%20onde%20estou%20perdendo%20vendas."
+              href="https://wa.me/5591984339322?text=Olá!%20Quero%20meu%20diagnóstico%20gratuito%20para%20descobrir%20onde%20estou%20perdendo%20vendas."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon inline-block w-full sm:w-auto px-10 py-4 text-lg"

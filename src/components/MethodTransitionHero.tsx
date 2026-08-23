@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Layers } from "lucide-react";
 
 const whatsappLink =
-  "https://wa.me/5591982540570?text=Olá!%20Quero%20fazer%20o%20diagnóstico%20gratuito%20e%20entender%20quais%20etapas%20fazem%20sentido%20pro%20meu%20negócio%20agora.%20Pode%20me%20ajudar%3F";
+  "https://wa.me/5591984339322?text=Olá!%20Quero%20fazer%20o%20diagnóstico%20gratuito%20e%20entender%20quais%20etapas%20fazem%20sentido%20pro%20meu%20negócio%20agora.%20Pode%20me%20ajudar%3F";
 
 export function MethodTransitionHero() {
   return (
