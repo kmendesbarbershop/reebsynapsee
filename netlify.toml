@@ -1,8 +1,4 @@
+# Site estatico (HTML, CSS e JS puros). Sem build: o Netlify publica a pasta "site" como ela esta.
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "echo 'site estatico, sem build'"
+  publish = "site"
