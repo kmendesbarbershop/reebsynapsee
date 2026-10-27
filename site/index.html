@@ -162,24 +162,31 @@ html.js .rv.in{opacity:1;transform:none}
 .svc-text h3{margin-top:10px;font-size:1.6rem}
 .mini{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .mini li{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(182,255,0,.4);padding:6px 10px;border-radius:2px}
-.ig{width:100%;max-width:420px;background:#0e0f14;border:1px solid var(--line);border-radius:4px;padding:14px;display:grid;gap:12px;margin:0 26px 28px;width:calc(100% - 52px)}
-.ig-top{display:flex;align-items:center;gap:10px}
-.ig-av{width:34px;height:34px;border-radius:2px;background:var(--accent) url(assets/logo-reeb.png) center/70% no-repeat;flex:none}
-.ig-id{display:grid;line-height:1.25;flex:1;min-width:0}.ig-id b{font-size:.85rem;color:var(--text-primary)}.ig-id small{font-size:.72rem;color:var(--text-secondary)}
-.ig-pill{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:var(--accent);border:1px solid rgba(182,255,0,.5);padding:4px 8px;border-radius:2px;text-transform:uppercase}
-.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
-.pt{aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;padding:8px;border-radius:2px;overflow:hidden;position:relative}
-.pt em{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.1em;opacity:.9}
-.pt b{font-family:'Russo One','Manrope',sans-serif;font-weight:400;font-size:.74rem;line-height:1.15}
-.pt-a{background:linear-gradient(160deg,#1A1A2E,#2a2d52);color:var(--text-primary)}
-.pt-a em{color:var(--accent)}
-.pt-b{background:var(--accent);color:#0B0C10}
-.pt-c{background:#1d1f27;color:var(--text-primary);border:1px solid var(--line)}
-.pt-c em{color:var(--text-secondary)}
-.ig-week{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
-.ig-week span{font-size:.72rem;color:var(--text-primary);background:var(--panel-2);border-radius:2px;padding:6px 8px;display:grid}
-.ig-week i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.1em;color:var(--accent)}
-@media (min-width:760px){.ig{margin:28px 34px;width:min(420px,40%)}}
+.ag{background:#0e0f14;border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:14px;margin:0 26px 28px;width:calc(100% - 52px);max-width:460px}
+.ag-top{display:flex;align-items:center;gap:10px}
+.ag-av{width:34px;height:34px;border-radius:2px;background:var(--accent) url(assets/logo-reeb.png) center/70% no-repeat;flex:none}
+.ag-id{display:grid;line-height:1.25;flex:1;min-width:0}.ag-id b{font-size:.88rem;color:var(--text-primary)}.ag-id small{font-size:.72rem;color:var(--text-secondary)}
+.ag-pill{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--accent);border:1px solid rgba(182,255,0,.5);padding:4px 8px;border-radius:2px;text-transform:uppercase}
+.ag-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.ag-days span{display:grid;justify-items:center;gap:2px;padding:6px 0;border-radius:2px;background:var(--panel-2);font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;color:var(--text-secondary)}
+.ag-days b{font-family:var(--display);font-weight:400;font-size:.9rem;color:var(--text-primary);letter-spacing:0}
+.ag-days .on{background:var(--accent);color:#0B0C10}.ag-days .on b{color:#0B0C10}
+.ag-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ag-row{display:grid;grid-template-columns:18px 42px 1fr auto;align-items:center;gap:10px;padding:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:3px;transition:border-color .4s,background .4s}
+.ag-row.s3{border-color:rgba(182,255,0,.45)}
+.ag-chk{width:16px;height:16px;border:1.5px solid var(--text-secondary);border-radius:3px;position:relative;transition:background .3s,border-color .3s}
+.ag-row.s3 .ag-chk{background:var(--accent);border-color:var(--accent)}
+.ag-row.s3 .ag-chk::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;border:solid #0B0C10;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ag-time{font-family:var(--mono);font-size:.66rem;color:var(--text-secondary)}
+.ag-t{display:grid;line-height:1.25;min-width:0}.ag-t b{font-size:.82rem;font-weight:600;color:var(--text-primary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ag-t small{font-size:.68rem;color:var(--text-secondary)}
+.ag-st{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border-radius:2px;border:1px solid var(--line);color:var(--text-secondary);white-space:nowrap;transition:all .3s}
+.ag-row.s1 .ag-st{color:var(--text-primary);border-color:rgba(245,245,247,.4)}
+.ag-row.s2 .ag-st{color:var(--accent);border-color:rgba(182,255,0,.5)}
+.ag-row.s3 .ag-st{background:var(--accent);color:#0B0C10;border-color:var(--accent)}
+.ag-foot{display:grid;gap:6px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary)}
+.ag-bar{height:6px;background:var(--panel-2);border-radius:2px;overflow:hidden}.ag-bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .6s ease}
+@media (min-width:760px){.ag{margin:28px 34px;width:min(460px,44%)}}
+@media (max-width:420px){.ag-row{grid-template-columns:18px 1fr auto}.ag-time{display:none}}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:20px 26px 28px;max-width:420px}
 .cal i{aspect-ratio:1;background:var(--panel-2);border:1px solid var(--line);border-radius:2px}
 .cal i.h{background:var(--accent-muted);border-color:rgba(182,255,0,.55)}
@@ -393,7 +400,7 @@ html.scrub .scrim{z-index:1}
       <article class="svc svc-wide rv">
         <div class="svc-text"><span class="eyebrow">Porta de entrada</span><h3>Social media estratégico</h3><p>Calendário, roteiro e conteúdo planejados pra construir autoridade e levar o cliente até a conversa. Cada post tem um objetivo, e cada resultado é medido.</p>
           <ul class="mini"><li>Planejamento mensal</li><li>Roteiros e criativos</li><li>Métricas que importam</li></ul></div>
-        <div class="ig" aria-hidden="true"><div class="ig-top"><span class="ig-av"></span><span class="ig-id"><b>@seunegocio</b><small>Planejamento do mês</small></span><span class="ig-pill">Em dia</span></div><div class="ig-grid"><span class="pt pt-a"><em>REEL</em><b>3 erros que afastam cliente</b></span><span class="pt pt-b"><em>CARROSSEL</em><b>Antes e depois real</b></span><span class="pt pt-c"><em>FOTO</em><b>Bastidor do dia</b></span><span class="pt pt-b"><em>CARROSSEL</em><b>Como funciona, passo a passo</b></span><span class="pt pt-a"><em>REEL</em><b>Cliente falando</b></span><span class="pt pt-c"><em>STORY</em><b>Enquete: qual prefere?</b></span><span class="pt pt-c"><em>FOTO</em><b>Oferta da semana</b></span><span class="pt pt-a"><em>REEL</em><b>Pergunta que todo mundo faz</b></span><span class="pt pt-b"><em>CARROSSEL</em><b>Mitos do seu setor</b></span></div><div class="ig-week"><span><i>SEG</i>Reel</span><span><i>QUA</i>Carrossel</span><span><i>SEX</i>Story</span><span><i>DOM</i>Foto</span></div></div>
+        <div class="ag" aria-hidden="true"><div class="ag-top"><span class="ag-av"></span><span class="ag-id"><b>Calendário de conteúdo</b><small>Semana de exemplo</small></span><span class="ag-pill">Em dia</span></div><div class="ag-days"><span>SEG<b>2</b></span><span>TER<b>3</b></span><span class="on">QUA<b>4</b></span><span>QUI<b>5</b></span><span>SEX<b>6</b></span><span>SÁB<b>7</b></span><span>DOM<b>8</b></span></div><ul class="ag-list"><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">09:00</span><span class="ag-t"><b>3 erros que afastam cliente</b><small>Reel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">12:30</span><span class="ag-t"><b>Antes e depois real</b><small>Carrossel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">18:00</span><span class="ag-t"><b>Bastidor do dia</b><small>Story</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">19:00</span><span class="ag-t"><b>Pergunta que todo mundo faz</b><small>Reel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">20:00</span><span class="ag-t"><b>Oferta da semana</b><small>Foto</small></span><span class="ag-st">Roteiro</span></li></ul><div class="ag-foot"><span>Posts da semana</span><div class="ag-bar"><i></i></div></div></div>
       </article>
       <article class="svc rv">
         <div class="media"><span class="chip-ia">IA POWERED</span><video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-mp4="https://res.cloudinary.com/dtos5kljq/video/upload/f_mp4,q_auto,w_900/v1777320878/copy_C7664BD2-BFBC-48F0-8712-9FDBD1171685_m3y1lb.mp4" data-src="https://res.cloudinary.com/dtos5kljq/video/upload/v1777320878/copy_C7664BD2-BFBC-48F0-8712-9FDBD1171685_m3y1lb.mov" data-local="assets/videos/videos-showcase.mp4" poster="assets/videos/videos-poster.jpg"></video></div>
@@ -812,6 +819,27 @@ GATES.forEach(function(q){ matchMedia(q).addEventListener('change', applyHeroMod
 addEventListener('resize', function(){ if (scrubOn) { measure(); onScroll(); } });
 addEventListener('load', function(){ if (scrubOn) { measure(); onScroll(); } });
 applyHeroMode();
+})();
+
+/* agenda animada */
+(function(){
+  var ag=document.querySelector('.ag'); if(!ag) return;
+  var rows=[].slice.call(ag.querySelectorAll('.ag-row')), bar=ag.querySelector('.ag-bar i');
+  var labels=['Roteiro','Gravado','Agendado','Publicado'], st=rows.map(function(){return 0;});
+  function paint(){ rows.forEach(function(r,i){ r.className='ag-row s'+st[i]; r.querySelector('.ag-st').textContent=labels[st[i]]; });
+    bar.style.width=(st.reduce(function(a,b){return a+b;},0)/(rows.length*3)*100)+'%'; }
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ st=[3,3,2,1,0]; paint(); return; }
+  paint();
+  var timer=null,k=0;
+  function tick(){
+    if(st.every(function(v){return v===3;})){ st=st.map(function(){return 0;}); k=0; paint(); return; }
+    for(var n=0;n<rows.length;n++){ var i=(k+n)%rows.length; if(st[i]<3 && (i===0 || st[i-1]>st[i] || st[i-1]===3)){ st[i]++; k=i+1; break; } }
+    paint();
+  }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ if(es[0].isIntersecting){ if(!timer) timer=setInterval(tick,950); } else { clearInterval(timer); timer=null; } },{threshold:.2}).observe(ag);
+  } else { timer=setInterval(tick,950); }
 })();
 </script>
 </body>
