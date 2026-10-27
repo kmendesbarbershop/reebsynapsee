@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reebsynapse.netlify.app/sitemap.xml
