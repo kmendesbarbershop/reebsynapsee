@@ -157,7 +157,9 @@ html.js .rv.in{opacity:1;transform:none}
 .chip-ia{position:absolute;left:14px;top:14px;z-index:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--canvas);background:var(--accent);padding:5px 10px;border-radius:2px}
 
 
-.svc-wide{flex-direction:column;gap:0;border-color:rgba(182,255,0,.35)}
+.svc-wide{flex-direction:column;gap:0;border-color:rgba(182,255,0,.35);isolation:isolate}
+.svc-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left 22%;opacity:.4;z-index:-2;filter:saturate(.7);pointer-events:none}
+.svc-wide::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(19,21,28,.35) 0%,rgba(19,21,28,.78) 55%,rgba(19,21,28,.92) 100%);pointer-events:none}
 .svc-text{padding:28px 26px 8px}
 .svc-text h3{margin-top:10px;font-size:1.6rem}
 .mini{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
@@ -398,6 +400,7 @@ html.scrub .scrim{z-index:1}
     </div>
     <div class="svc-grid">
       <article class="svc svc-wide rv">
+        <video class="svc-bg" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-bg="assets/videos/bg-social.mp4" poster="assets/videos/bg-social-poster.jpg"></video>
         <div class="svc-text"><span class="eyebrow">Porta de entrada</span><h3>Social media estratégico</h3><p>Calendário, roteiro e conteúdo planejados pra construir autoridade e levar o cliente até a conversa. Cada post tem um objetivo, e cada resultado é medido.</p>
           <ul class="mini"><li>Planejamento mensal</li><li>Roteiros e criativos</li><li>Métricas que importam</li></ul></div>
         <div class="ag" aria-hidden="true"><div class="ag-top"><span class="ag-av"></span><span class="ag-id"><b>Calendário de conteúdo</b><small>Semana de exemplo</small></span><span class="ag-pill">Em dia</span></div><div class="ag-days"><span>SEG<b>2</b></span><span>TER<b>3</b></span><span class="on">QUA<b>4</b></span><span>QUI<b>5</b></span><span>SEX<b>6</b></span><span>SÁB<b>7</b></span><span>DOM<b>8</b></span></div><ul class="ag-list"><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">09:00</span><span class="ag-t"><b>3 erros que afastam cliente</b><small>Reel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">12:30</span><span class="ag-t"><b>Antes e depois real</b><small>Carrossel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">18:00</span><span class="ag-t"><b>Bastidor do dia</b><small>Story</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">19:00</span><span class="ag-t"><b>Pergunta que todo mundo faz</b><small>Reel</small></span><span class="ag-st">Roteiro</span></li><li class="ag-row s0"><span class="ag-chk"></span><span class="ag-time">20:00</span><span class="ag-t"><b>Oferta da semana</b><small>Foto</small></span><span class="ag-st">Roteiro</span></li></ul><div class="ag-foot"><span>Posts da semana</span><div class="ag-bar"><i></i></div></div></div>
@@ -570,7 +573,7 @@ if ('IntersectionObserver' in window) {
 document.addEventListener('visibilitychange', function(){ document.body.classList.toggle('paused', document.hidden); });
 
 /* ---------- videos dos servicos (carrega perto da tela, toca so visivel) ---------- */
-var svcVideos = document.querySelectorAll('.svc video');
+var svcVideos = document.querySelectorAll('.svc video:not(.svc-bg)');
 function attachSvc(v){
   if (v.dataset.ready) return;
   v.dataset.ready = '1';
@@ -840,6 +843,21 @@ applyHeroMode();
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){ if(es[0].isIntersecting){ if(!timer) timer=setInterval(tick,950); } else { clearInterval(timer); timer=null; } },{threshold:.2}).observe(ag);
   } else { timer=setInterval(tick,950); }
+})();
+
+/* video de fundo suave (social media) */
+(function(){
+  var v=document.querySelector('.svc-bg'); if(!v) return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var save=navigator.connection&&navigator.connection.saveData;
+  if(reduce||save||!('IntersectionObserver' in window)) return;
+  var loaded=false;
+  new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){
+      if(!loaded){ loaded=true; v.src=v.dataset.bg; v.load(); }
+      var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
+    } else { v.pause(); }
+  },{threshold:.15}).observe(v);
 })();
 </script>
 </body>
